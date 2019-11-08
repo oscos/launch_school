@@ -1,4 +1,4 @@
-# Launch School Book: Introduction To Programming
+# Launch School Book: Introduction To Programming With Ruby
 # The Basics - Excercise 01 
 
 =begin
