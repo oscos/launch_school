@@ -1,5 +1,6 @@
 # Launch School Book: Introduction To Programming With Ruby
 # The Basics - Excercise 02
+# 11/08/2019
 
 =begin
 Use the modulo operator, division, or a combination of both 
