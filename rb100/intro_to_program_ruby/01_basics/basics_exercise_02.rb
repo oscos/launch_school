@@ -1,7 +1,6 @@
 # Launch School Book: Introduction To Programming With Ruby
 # The Basics - Excercise 02
-# Created By: oscos 
-# Created Date:  11/08/2019
+# Answered On:  11/08/2019
 
 =begin
 Use the modulo operator, division, or a combination of both 
