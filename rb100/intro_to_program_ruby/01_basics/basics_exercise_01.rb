@@ -1,7 +1,6 @@
 # Launch School Book: Introduction To Programming With Ruby
 # The Basics - Excercise 01 
-# Created By: oscos 
-# Created Date:  11/07/2019
+# Answered On:  11/07/2019
 
 =begin
 Add two strings together that, when concatenated, 

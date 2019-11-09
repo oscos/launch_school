@@ -1,7 +1,6 @@
 # Launch School Book: Introduction To Programming With Ruby
 # The Basics - Excercise 03 
-# Created By: oscos 
-# Created Date: 11/08/2019
+# Answered On: 11/08/2019
 
 # INSTRUCTIONS:
 # Write a program that uses a hash to store a list of movie titles with the year they came out. 
