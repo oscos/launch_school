@@ -16,6 +16,13 @@ movies = {
   :transformers => 2007
 }
 
+# Refactored code below.
+movies.each do
+  |movie, year|
+   puts year
+end
+    
+### START: Thinking through solution ### 
 =begin
 puts movies[:jaws]
 puts movies[:rocky]
@@ -24,8 +31,4 @@ puts movies[:ghost]
 puts movies[:titanic]
 puts movies[:transformers]
 =end
-            
-movies.each do
-  |movie, year|
-  puts year
-end
+### END: Thinking through solution ###

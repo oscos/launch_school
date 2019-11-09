@@ -2,21 +2,23 @@
 # The Basics - Excercise 02
 # Answered On:  11/08/2019
 
-=begin
-Use the modulo operator, division, or a combination of both 
-to take a 4 digit number and find the digit in the: 
-  1) thousands place 
-  2) hundreds place 
-  3) tens place 
-  4) ones place
-=end
+# INSTRUCTIOS:
+# Use the modulo operator, division, or a combination of both 
+# to take a 4 digit number and find the digit in the: 
+#  1) thousands place 
+#  2) hundreds place 
+#  3) tens place 
+#  4) ones place
 
 # Notes: When using positive integer values, 
 # the modulus is equal to remainder of A when divided by B.
 # However not so when using negative values.
-# Here are two articles for additonal reading: 
+#
+# Helpful Articles: 
 # https://medium.com/@tannrallard/exploring-the-difference-between-modulus-and-remainder-in-rubys-numeric-class-65eb8b50a4b8
 # http://ruby.bastardsbook.com/chapters/numbers/
+#
+# Topics to Follow Up On: divmod 
 
 puts "Enter a 4 digit positive integer between 1000 and 9999"
 num = gets.chomp
