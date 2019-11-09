@@ -8,6 +8,13 @@
 
 arr = [1975,1976,1984,1990,1997,2007]
 
+# Refactored code below.
+arr.each do
+  |year|
+  puts year
+end
+
+### START - Thinking throug solution ###
 =begin
 puts arr[0]
 puts arr[1]
@@ -16,8 +23,4 @@ puts arr[3]
 puts arr[4]
 puts arr[5]
 =end
-
-arr.each do
-  |year|
-  puts year
-end
+### END -Thinking through solution ###
