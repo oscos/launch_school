@@ -16,7 +16,7 @@
 #
 # Topics to Follow Up On: Injection, Recursion
 #
-# TODO: Add a messge containing the number being factored with the each result.
+# TODO: Add a messge containing the number being factored with each result.
 
 arr = [5,6,7,8]
 
@@ -46,7 +46,7 @@ end
     puts i
   end
   
-  # STEP 3: introduce new variable to capture the 
+  # STEP 3: introduce new variable result to capture the 
   # new i value and mulitply by previous i value.
   i = arr[0]
   result = 1
