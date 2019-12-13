@@ -68,4 +68,4 @@
 ### Insightful
 * [How to walk through code](https://launchschool.slack.com/archives/C4ABCN8UA/p1575926059044400)
 * [jsiny insights](https://github.com/jsiny/til/blob/master/README.md)
-
+* [l-jdavies](https://github.com/l-jdavies/launch-school-exercise-solutions/blob/master/intro-to-programming/chapter_6_arrays/2.md)
