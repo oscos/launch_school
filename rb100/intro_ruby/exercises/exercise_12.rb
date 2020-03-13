@@ -1,11 +1,11 @@
 # Launch School Book: Introduction To Programming With Ruby
-# additional_exercises_11.rb 
+# additional_exercises_12.rb 
 # Answered On: 03/12/2020
 
 # INSTRUCTIONS:
-# Given the following data structures. Write a program that copies the 
-# information from the array into the empty hash that applies to the 
-# correct person
+# Using the hash you created from the previous exercise, demonstrate 
+# how you would access Joe's email and Sally's phone number?
+
 
 
 contact_data = [
@@ -24,3 +24,6 @@ contacts["Joe Smith"][:phone] = contact_data[0][2]
 contacts["Sally Johnson"][:email] = contact_data[1][0]
 contacts["Sally Johnson"][:address] = contact_data[1][1]
 contacts["Sally Johnson"][:phone] = contact_data[1][2]
+
+puts "Joe Smith email is: #{contacts["Joe Smith"][:email]}"
+puts "Sally Johnson phone number is: #{contacts["Sally Johnson"][:phone]}"
