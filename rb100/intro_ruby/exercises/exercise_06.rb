@@ -1,5 +1,5 @@
 # Launch School Book: Introduction To Programming With Ruby
-# additional_exercises_06.rb 
+# exercises_06.rb 
 # Answered On: 03/10/2020
 
 # INSTRUCTIONS:
