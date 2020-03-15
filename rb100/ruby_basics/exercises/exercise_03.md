@@ -1,10 +1,7 @@
 ---
-# Launch School Book: Ruby Basics - Exercises
-# exercise_03.md 
-# Answered On: 03/14/2020
-
-# INSTRUCTIONS:
-# 
+Launch School Book: Ruby Basics - Exercises
+FileName: exercise_03.md 
+Answered On: 03/14/2020
 ---
 
 # Return Value of while

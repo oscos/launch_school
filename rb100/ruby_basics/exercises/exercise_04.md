@@ -2,9 +2,6 @@
 Launch School Book: Ruby Basics - Exercises
 FileName: exercise_04.md 
 Answered On: 03/14/2020
-Modified On: 03/15/2020
-
-INSTRUCTIONS:
 ---
 
 # Return Value of break
