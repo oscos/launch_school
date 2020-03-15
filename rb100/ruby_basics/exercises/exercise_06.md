@@ -10,6 +10,8 @@ Using the ruby documentation, determine how you would write a Symbol that repres
 your name. We aren't looking for a String; we want a Symbol, which is one of ruby's 
 datatypes.
 
+Answer: 
+
 Ruby Documentation can be found at [Symbol](https://ruby-doc.org/core-2.5.1/Symbol.html)
 and at [Literals->Symbol](https://ruby-doc.org/core-2.5.1/doc/syntax/literals_rdoc.html#label-Symbols)
 

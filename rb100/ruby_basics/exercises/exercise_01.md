@@ -8,6 +8,8 @@ Answered On: 03/14/2020
 
 Where can you find the most complete Ruby documentation?
 
+Answer: 
+
 Here are two links: 
 1. [Ruby-Docs.org](https://ruby-doc.org/)
 2. [Docs-Ruby-Lang.org/en](https://docs.ruby-lang.org/en/)

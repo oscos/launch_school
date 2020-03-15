@@ -8,6 +8,8 @@ Answered On: 03/14/2020
 
 Locate the description of the while loop in the ruby documentation.
 
+Answer: 
+
 1. Navigate to [Ruby-Docs.org](https://ruby-doc.org/).
 2. Select the core API link for your version of ruby.
 3. Select the 'control expressions' link.
