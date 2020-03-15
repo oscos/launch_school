@@ -15,11 +15,12 @@ which is found under [Literals](https://ruby-doc.org/core-2.5.1/doc/syntax/liter
 >The underscore may be used to enhance readability for humans. 
 >You may place an underscore anywhere in the number
 
-What this means is the following:
+What this means:
 
 1. You can use an underscore instead of comma to seperate a large number.
 
-In place of commas, you can write 9,876,543 as follow:
+Since Ruby will convert commas wiithin a number 9,876,543 to array items: [9, 876, 543], 
+instead you would write this number out as follow:
 
 ```
 9_876_543
