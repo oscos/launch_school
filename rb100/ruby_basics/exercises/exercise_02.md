@@ -1,6 +1,6 @@
 ---
 # Launch School Book: Ruby Basics - Exercises
-# exercise_02.rb 
+# exercise_02.md
 # Answered On: 03/14/2020
 
 # INSTRUCTIONS:
