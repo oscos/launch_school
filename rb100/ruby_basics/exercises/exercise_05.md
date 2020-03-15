@@ -28,4 +28,4 @@ In place of commas, you can write 9,876,543 as follow:
 
 In addition to the underscore there is additonal syntax within the 
 [Numbers](https://ruby-doc.org/core-2.5.1/doc/syntax/literals_rdoc.html#label-Numbers) 
-which you can use for better number readability.
+section which you can use for better number readability.
