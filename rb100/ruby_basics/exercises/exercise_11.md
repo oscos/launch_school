@@ -58,7 +58,7 @@ of strings returned to 2
 
 Resources: 
 [String#split](https://ruby-doc.org/core-2.7.0/String.html#method-i-split),
-[String#split](https://ruby-doc.org/core-2.7.0/String.html#method-i-inspect),
+[String#inspectt](https://ruby-doc.org/core-2.7.0/String.html#method-i-inspect),
 [Ruby String#split](https://spin.atomicobject.com/2007/11/01/ruby-string-split/),
 [Ruby: to_s vs inspect](https://medium.com/rubycademy/display-complex-objects-d897be936ae0),
 [Inspecting data in Ruby](https://blog.appsignal.com/2018/02/21/inspecting-data-in-ruby.html), 
