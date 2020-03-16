@@ -17,7 +17,7 @@ puts s.split(',', 2).inspect #Exercise C
 ```
 What will each of the 3 puts statements print?
 
-Answer: 
+Answer(s): 
 
 Excercise A:
 ```
@@ -38,10 +38,11 @@ puts s.split(',', 2).inspect
 ```
 
 Similaritities: 
-1. All 3 problems contain the 
+1. All 3 exercises contain the 
 [#split](https://ruby-doc.org/core-2.7.0/String.html#method-i-split) 
-instance method which dvides the string "s" into substrings, delimited by 
-either whitespaces or commas, and return a new array object.
+instance method which dvides the string "s" into substrings, which in these 
+three exercises are delimited by either whitespaces or commas, and return 
+a new array object.
 2. All 3 problems contain the 
 [#inspect](https://ruby-doc.org/core-2.7.0/String.html#method-i-inspect) 
 instance method which returns a string representation of the array object
