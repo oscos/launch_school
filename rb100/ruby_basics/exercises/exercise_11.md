@@ -1,0 +1,64 @@
+---
+Launch School Book: Ruby Basics - Exercises
+ExerciseName: [Optional Arguments](https://launchschool.com/exercises/7a8f47f00)
+FileName: exercise_11.md
+Answered On: 03/15/2020
+---
+
+# Optional Arguments
+
+Assume you have the following code:
+
+```
+s = 'abc def ghi,jkl mno pqr,stu vwx yz'
+puts s.split.inspect #Exercise A
+puts s.split(',').inspect #Exercise B
+puts s.split(',', 2).inspect #Exercise C
+```
+What will each of the 3 puts statements print?
+
+Answer: 
+
+Excercise A:
+```
+puts s.split.inspect
+["abc", "def", "ghi,jkl", "mno", "pqr,stu", "vwx", "yz"]
+```
+
+Excercise B:
+```
+puts s.split(',').inspect 
+prints:  ["abc def ghi", "jkl mno pqr", "stu vwx yz"]
+```
+
+Excercise C:
+```
+puts s.split(',', 2).inspect
+["abc def ghi", "jkl mno pqr,stu vwx yz"]
+```
+
+Similaritities: 
+1. All 3 problems contain the 
+[#split](https://ruby-doc.org/core-2.7.0/String.html#method-i-split) 
+instance method which dvides the string "s" into substrings, delimited by 
+either whitespaces or commas, and return a new array object.
+2. All 3 problems contain the 
+[#inspect](https://ruby-doc.org/core-2.7.0/String.html#method-i-inspect) 
+instance method which returns a string representation of the array object
+that was created by the split instance method.
+3. s.split is the same as calling s.split(' ') but not s.split('') nor s.split('   ')
+4. "puts s.split.inspect" outputs the same result as "p s.split" 
+
+Differences:
+1. Exercise A - uses whitespace as the delimmeter
+2. Exercise B - Uses comma as the delimmeter
+3. Exercise C - Uses comma as the delimmiter, with a rule limitting the number
+of strings returned to 2
+
+Resources: 
+[String#split](https://ruby-doc.org/core-2.7.0/String.html#method-i-split),
+[String#split](https://ruby-doc.org/core-2.7.0/String.html#method-i-inspect),
+[Ruby String#split](https://spin.atomicobject.com/2007/11/01/ruby-string-split/),
+[Ruby: to_s vs inspect](https://medium.com/rubycademy/display-complex-objects-d897be936ae0),
+[Inspecting data in Ruby](https://blog.appsignal.com/2018/02/21/inspecting-data-in-ruby.html), 
+[How to Create Ruby Objects That Describe Themselves](https://www.rubyguides.com/2018/12/ruby-inspect-method/)
