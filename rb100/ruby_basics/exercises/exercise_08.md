@@ -12,4 +12,4 @@ method can be used to right justify a String object.
 Answer: 
 
 Ruby Documentation can be found at 
-[rjust](https://ruby-doc.org/core-2.4.1/String.html#method-i-rjust)
+[#rjust](https://ruby-doc.org/core-2.4.1/String.html#method-i-rjust)
