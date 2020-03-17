@@ -1,5 +1,6 @@
 ---
 Launch School Book: Ruby Basics - Exercises
+ExerciseName: [Return Value of while](https://launchschool.com/exercises/30280305)
 FileName: exercise_04.md 
 Answered On: 03/14/2020
 ---
@@ -13,7 +14,7 @@ break sets the return value to for the while loop.
 Answer: 
 
 Per the Ruby documentation for 
-[break](https://ruby-doc.org/core-2.7.0/doc/syntax/control_expressions_rdoc.html#label-break+Statement):
+[#break](https://ruby-doc.org/core-2.7.0/doc/syntax/control_expressions_rdoc.html#label-break+Statement):
 
 > break accepts a value that supplies the result of the expression it is "breaking" out of:
 

@@ -1,5 +1,6 @@
 ---
 Launch School Book: Ruby Basics - Exercises
+ExerciseName: [Symbol Syntax](https://launchschool.com/exercises/bbc5b10d)
 FileName: exercise_05.md 
 Answered On: 03/15/2020
 ---
@@ -12,9 +13,10 @@ datatypes.
 
 Answer: 
 
-Ruby Documentation can be found at [Symbol](https://ruby-doc.org/core-2.5.1/Symbol.html)
-and at [Literals->Symbol](https://ruby-doc.org/core-2.5.1/doc/syntax/literals_rdoc.html#label-Symbols)
-
 ```
 :Oscar
 ```
+Resources:
+[Symbol](https://ruby-doc.org/core-2.5.1/Symbol.html),
+[Literals->Symbol](https://ruby-doc.org/core-2.5.1/doc/syntax/literals_rdoc.html#label-Symbols)
+

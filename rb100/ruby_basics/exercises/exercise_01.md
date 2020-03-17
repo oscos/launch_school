@@ -1,5 +1,6 @@
 ---
 Launch School Book: Ruby Basics - Exercises
+ExerciseName: [Where to Find Documentation](https://launchschool.com/exercises/bb38f937)
 FileName: exercise_01.md 
 Answered On: 03/14/2020
 ---
@@ -13,3 +14,16 @@ Answer:
 Here are two links: 
 1. [Ruby-Docs.org](https://ruby-doc.org/)
 2. [Docs-Ruby-Lang.org/en](https://docs.ruby-lang.org/en/)
+
+Documentation is split into two API sections with links to each Ruby versions:
+
+1. Core API - Contains base classes and modules that are used more often 
+and therefore are automatcially imported and available to users in both 
+IRB and ruby scripts.
+
+2. Standard Library API - Contains standard classes and modules that are
+used less often and therefor need to be imported by callig them explicity 
+using the **Required** command.
+
+Resources: 
+[The Core API vs. Standard Library API in Ruby](https://www.codeencounters.com/post/98909190540/the-core-api-vs-standard-library-api-in-ruby)

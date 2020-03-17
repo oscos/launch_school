@@ -1,5 +1,6 @@
 ---
 Launch School Book: Ruby Basics - Exercises
+ExerciseName: [Methods Without Arguments](https://launchschool.com/exercises/10da86df)
 FileName: exercise_09.md 
 Answered On: 03/15/2020
 ---
@@ -11,12 +12,13 @@ the string "xyz"?
 
 Answer: 
 
-Ruby Documentation can be found at:  
-[#upcase](https://ruby-doc.org/core-2.4.0/String.html#method-i-upcase)
-
 ```
 "xyz".upcase
 ```
 
 Note that the upcase method for String does not mutate the caller which
 means a new string is returned, leaving the original string unchanged.
+
+Resources: 
+Ruby Documentation can be found at:  
+[String#upcase](https://ruby-doc.org/core-2.4.0/String.html#method-i-upcase)

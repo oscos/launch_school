@@ -1,6 +1,7 @@
 ---
 Launch School Book: Ruby Basics - Exercises
 FileName: exercise_07.md 
+ExerciseName: [String Class](https://launchschool.com/exercises/4a89a4e0)
 Answered On: 03/15/2020
 ---
 
@@ -14,4 +15,5 @@ Locate and open the class documentation for the String class.
 
 Answer: 
 
-Ruby Documentation can be found at [String](https://ruby-doc.org/core-2.4.0/String.html)
+Ruby Documentation can be found at:
+[String](https://ruby-doc.org/core-2.4.0/String.html)

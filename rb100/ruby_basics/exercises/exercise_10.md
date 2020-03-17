@@ -1,5 +1,6 @@
 ---
 Launch School Book: Ruby Basics - Exercises
+ExerciseName: [Required Arguments](https://launchschool.com/exercises/210fa7c7)
 FileName: exercise_10.md 
 Answered On: 03/15/2020
 ---
@@ -17,9 +18,9 @@ between the elements with values 'c' and 'd'?
 
 Answer: 
 
-Ruby Documentation can be found at 
-[Array#insert](https://ruby-doc.org/core-2.4.0/Array.html#method-i-insert)
-
 ```
 a.insert(3,7,8.9)
 ```
+
+Resources: 
+[Array#insert](https://ruby-doc.org/core-2.4.0/Array.html#method-i-insert)
