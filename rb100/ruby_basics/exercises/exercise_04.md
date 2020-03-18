@@ -28,7 +28,7 @@ Here is a simple code example from the answers and discussion section in the
 exercises which illustrates the return value of the while loop when break 
 is not assigned a value.
 
-```
+```ruby
 result = while true
   break
 end
