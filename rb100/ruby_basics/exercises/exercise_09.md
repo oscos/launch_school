@@ -12,7 +12,7 @@ the string "xyz"?
 
 Answer: 
 
-```
+```ruby
 "xyz".upcase
 ```
 

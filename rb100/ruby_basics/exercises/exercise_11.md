@@ -9,31 +9,28 @@ Answered On: 03/15/2020
 
 Assume you have the following code:
 
-```
+```ruby
 s = 'abc def ghi,jkl mno pqr,stu vwx yz'
-puts s.split.inspect #Exercise A
-puts s.split(',').inspect #Exercise B
-puts s.split(',', 2).inspect #Exercise C
+puts s.split.inspect # Exercise A
+puts s.split(',').inspect # Exercise B
+puts s.split(',', 2).inspect # Exercise C
 ```
 What will each of the 3 puts statements print?
 
 Answer(s): 
 
 Excercise A:
-```
-puts s.split.inspect
+```ruby
 ["abc", "def", "ghi,jkl", "mno", "pqr,stu", "vwx", "yz"]
 ```
 
 Excercise B:
-```
-puts s.split(',').inspect 
+```ruby
 ["abc def ghi", "jkl mno pqr", "stu vwx yz"]
 ```
 
 Excercise C:
-```
-puts s.split(',', 2).inspect
+```ruby
 ["abc def ghi", "jkl mno pqr,stu vwx yz"]
 ```
 

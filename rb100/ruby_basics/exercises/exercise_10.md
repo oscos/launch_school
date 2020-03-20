@@ -18,7 +18,7 @@ between the elements with values 'c' and 'd'?
 
 Answer: 
 
-```
+```ruby
 a.insert(3,7,8.9)
 ```
 

@@ -16,7 +16,7 @@ Ruby provides different syntax to help with the readability of large numbers.
 One example is the underscore.  Since Ruby will convert commas within a number 
 to array items, here is one way to write 9,876,543 using the underscore instead:
 
-```
+```ruby
 9_876_543
 
 ```

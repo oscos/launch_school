@@ -13,7 +13,7 @@ datatypes.
 
 Answer: 
 
-```
+```ruby
 :Oscar
 ```
 Resources:
