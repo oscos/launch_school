@@ -1,0 +1,41 @@
+---
+Launch School Book: Ruby Basics - Exercises
+ExerciseName: [What's My Value? (Part 4)](https://launchschool.com/exercises/2eb238c9)
+FileName: exercise_15.md
+Answered On: 04/08/2020
+---
+
+# What's My Value? (Part 4)
+
+What will the following code print and why? Don't run it until you have 
+tried to answer.
+
+```ruby
+a = "Xyzzy"
+
+def my_value(b)
+  b[2] = '-'
+end
+
+my_value(a)
+puts a
+```
+Output: Xy-zy
+
+Explanation: 
+
+Because the string value of the object assigned to `variable a` outside the method 
+was mutated, the result of `puts a` outputs `Xy-zy`.
+
+Key Points: 
+
+1. Ruby objects with a string value are mutatable. 
+2. Operations inside methods like `String#[]=` are destructive and mutate the caller.
+3. It's possible for variables with different names to refer to the same object_id's 
+and output the same values if the method is destructive.
+
+Resources:
+
+1. [LS Ruby Variable Scope](https://launchschool.com/books/ruby/read/variables#variablescope)
+2. [Mutating and Non-Mutating Methods in Ruby](https://launchschool.com/blog/mutating-and-non-mutating-methods)
+3. [Mutate The Caller](https://medium.com/@anacasilva/mutate-the-caller-bf01d90c15a6)
