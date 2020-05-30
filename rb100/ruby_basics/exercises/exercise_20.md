@@ -1,0 +1,50 @@
+---
+Launch School Book: Ruby Basics - Exercises
+ExerciseName: [What's My Value? (Part 9)](https://launchschool.com/exercises/e1282eea)
+FileName: exercise_20.md
+Answered On: 05/23/2020
+---
+
+# What's My Value? (Part 9)
+
+What will the following code print and why? Don't run it until you have 
+tried to answer.
+
+```ruby
+a = 7
+array = [1, 2, 3]
+
+array.each do |a|
+  a += 1
+end
+
+puts a
+```
+Output: 7
+
+Explanation: 
+
+In this exercise, there are two variables sharing the same name `a`.  
+The first `variable a` that is initialized on line 1 is an `instance variable`.
+The second `variable a` on line 4 is a `local variable` to the array#each method.  
+Normally a methodinvocation with a block has access to the `instance variable` 
+initilized outside the method.  However because a `local variable a` has been 
+declared within the method invocation with a block, it shadows the 
+`instance variable a` initializedon line 1.  Thus `puts a` on line 8 which 
+bypasses the `local variable a` inside the block and refers back to the 
+`instance variable a` on line 1.
+
+
+Key Points: 
+
+1. Method invoication with a block is different than method definition
+2. A variable outside a method has a different scope than a variable inside 
+a method. Therefor it's possible to share the same variable name and refer to 
+different object_id's and output different values if the method is non-destructive.
+3. This exercise introduces shadowing.
+
+
+Resources:
+
+1. [LS Ruby Variable Scope](https://launchschool.com/books/ruby/read/variables#variablescope)
+2. [The Curious Incident of the Shadow in the Run-Time](https://paulfioravanti.com/blog/2018/08/20/the-curious-incident-of-the-shadow-in-the-run-time/)
