@@ -11,21 +11,13 @@ What will the following code print and why? Don't run it until you have
 tried to answer.
 
 ```ruby
-a = 7
-# p a.object_id
-
 array = [1, 2, 3]
 
 array.each do |element|
-   #p a
-   a = element
-   # p a
+  a = element
 end
 
-# p a.object_id
-
 puts a
-
 ```
 Output: 3
 
