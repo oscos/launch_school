@@ -33,8 +33,8 @@ if the `method definition with a block` is placed inside a `method
 definition`.
 
 Normally a `method invoication with a block` has access to outside local 
-variables without having to pass them in as parameters, in this case, 
-because it is enclosed within a `method definition`, it is closed off 
+variables initilized in outter scope without having to pass them in as parameters, 
+in this case, because it is enclosed within a `method definition`, it is closed off 
 from access to `variable a` on line 1.  Therefor this exercise will produce
 an error becuase the `method invocation with a block` is trying to access
 a `local variable a` that does not exist wthin it's scope.
