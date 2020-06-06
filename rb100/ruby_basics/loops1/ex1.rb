@@ -1,7 +1,11 @@
-a = 0
-z = 1
+loop do
+  puts 'This is the outer loop.'
 
-until a == z do
-  puts 'Just keep printing...'
-  a += 1
+  loop do
+    puts 'This is the inner loop.'
+    break
+  end
+  break
 end
+
+puts 'This is outside all loops - yall.'
