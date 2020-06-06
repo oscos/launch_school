@@ -1,12 +1,8 @@
-# ex03.md
-
-iterations = 1
+# ex04.md
 
 loop do
-  puts "Number of iterations = #{iterations}"
-  iterations += 1
-  
-  if iterations == 6
-    break
-  end
+  puts 'Should I stop looping?'
+  answer = gets.chomp.downcase
+  break if answer == "yes"
+  puts "enter the word 'yes' to stop loop."
 end
