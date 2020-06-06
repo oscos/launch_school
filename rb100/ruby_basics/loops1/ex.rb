@@ -1,11 +1,12 @@
-loop do
-  puts 'This is the outer loop.'
+# ex03.md
 
-  loop do
-    puts 'This is the inner loop.'
+iterations = 1
+
+loop do
+  puts "Number of iterations = #{iterations}"
+  iterations += 1
+  
+  if iterations == 6
     break
   end
-  break
 end
-
-puts 'This is outside all loops - yall.'
