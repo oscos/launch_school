@@ -1,12 +1,11 @@
 # ex06.md
-# Using a while loop, print 5 random numbers between 0 and 99. The code 
-# below shows an example of how to begin solving this exercise.
+# The following code outputs a countdown from 10 to 1. Modify the code so 
+# that it counts from 1 to 10 instead.
 
 
-numbers = []
+count = 1
 
-while numbers.size == 0
-  numbers << rand(100)
+until count == 11
+  puts count
+  count += 1
 end
-
-puts numbers
