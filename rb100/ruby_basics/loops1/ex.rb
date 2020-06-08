@@ -1,11 +1,12 @@
-# ex05.md
-# Modify the code below so "Hello!" is printed 5 times.
+# ex06.md
+# Using a while loop, print 5 random numbers between 0 and 99. The code 
+# below shows an example of how to begin solving this exercise.
 
-say_hello = true
-i = 0
 
-while say_hello
-  puts 'Hello!'
-  i += 1
-  say_hello = false if i == 5  
+numbers = []
+
+while numbers.size == 0
+  numbers << rand(100)
 end
+
+puts numbers
