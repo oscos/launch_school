@@ -1,20 +1,9 @@
-# ex08.md
-# Given the array of several numbers below, use an until loop to print each number.
+# ex09.md
+# The code below shows an example of a for loop. Modify the code so that it only outputs 
+# i if i is an odd number.
 
-numbers = [7, 9, 13, 25, 18]
 
-# Expected Output
-=begin
-7
-9
-13
-25
-18
-=end
-
-x = 0
-
-until x == numbers.size
-    puts numbers[x]
-    x += 1
+for i in 1..100
+  puts i if i % 2 != 0
+  # alternate solution: puts i if i.odd?
 end
