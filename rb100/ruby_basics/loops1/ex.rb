@@ -1,20 +1,9 @@
-# ex08.md
-# Given the array of several numbers below, use an until loop to print each number.
+# ex10.md
+# Your friends just showed up! Given the following array of names, use a for loop 
+# to greet each friend individually.
 
-numbers = [7, 9, 13, 25, 18]
+friends = ['Sarah', 'John', 'Hannah', 'Dave']
 
-# Expected Output
-=begin
-7
-9
-13
-25
-18
-=end
-
-x = 0
-
-until x == numbers.size
-    puts numbers[x]
-    x += 1
+for friend in friends
+   puts "Hello, #{friend}!"
 end
