@@ -1,14 +1,10 @@
-# ex01.md
+# ex02.md
+# Catch the Number
+# Modify the following code so that the loop stops if number is equal to or between 0 and 10.
 
-count = 1
 
 loop do
-   if count.even?
-       puts "#{count} is even!?"
-   else
-       puts "#{count} is odd!"
-   end
-   
-   count += 1   
-   break if count > 5  
+  number = rand(100)
+  puts number
+  break if number.between?(0,10)
 end
