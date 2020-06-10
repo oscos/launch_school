@@ -1,9 +1,20 @@
 # ex07.md
-# Get the Sum
-# The method below counts from 0 to 4. Modify the block so that it prints the 
-# current number and stops iterating when the current number equals 2.
+# Only Even
+# Using next, modify the code below so that it only prints even numbers.
 
-5.times do |index|
-  puts index
-  break if index == 2
+number = 0
+
+# until number == 10
+#   number += 1
+#   if number.odd?
+#     puts number.next
+#   end
+# end
+
+number = 0
+
+until number == 10
+  number += 1
+    next if number.odd?
+    puts number
 end
