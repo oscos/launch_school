@@ -1,13 +1,9 @@
-# ex06.md
+# ex07.md
 # Get the Sum
-# Given the array below, use loop to remove and print each name. Stop the loop 
-# once names doesn't contain any more elements.  Keep in mind to only use loop, 
-# not while, until, etc.
+# The method below counts from 0 to 4. Modify the block so that it prints the 
+# current number and stops iterating when the current number equals 2.
 
-names = ['Sally', 'Joe', 'Lisa', 'Henry']
-
-loop do
-  puts "Hello, #{names.shift}!" # first to last
-  # puts names.pop # last to first
-  break if names.empty?
+5.times do |index|
+  puts index
+  break if index == 2
 end
