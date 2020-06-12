@@ -1,28 +1,26 @@
-# ex04.md
-# Print Something (Part 2)
+# ex05.md
+# Launch School Printer (Part 1)
+# Write a program that prints 'Launch School is the best!' repeatedly until a 
+# certain number of lines have been printed. The program should obtain the number 
+# of lines from the user, and should insist that at least 3 lines are printed.
 
-# In the previous exercise, you wrote a program that asks the user if they want 
-# the program to print "something". However, this program recognized any input as 
-# valid: if you answered anything but y, it treated it as an n response, and quit 
-# without printing anything.
+# For now, just use #to_i to convert the input value to an Integer, and check that 
+# result instead of trying to insist on a valid number; validation of numeric 
+# input is a topic with a fair number of edge conditions that are beyond the 
+# scope of this exercise.
 
-# Modify your program so it prints an error message for any inputs that aren't y or n, 
-# and then asks you to try again. Keep asking for a response until you receive a 
-# valid y or n response. In addition, your program should allow both Y and N 
-# (uppercase) responses; case sensitive input is generally a poor user interface 
-# choice. Whenever possible, accept both uppercase and lowercase inputs.
 
+user_input = nil
 
 loop do
-  puts ">> Do you want this program to print something? Enter y or n"
-  user_input = gets.chomp.downcase
+  puts ">> How many output lines do you want? Enter a number >= 3:"
+  user_input = gets.chomp.to_i  
+  break if user_input >= 3
+  puts ">> That's not enough lines."  
+end
   
-  if user_input == 'y'
-    puts "something"
-    break
-  elsif user_input == 'n'
-    break
-  else 
-    puts ">> Invalid input! Please enter y or n"
-  end
+loop do
+  puts "Launch School is the best!"
+  user_input -= 1
+  break if user_input == 0
 end
