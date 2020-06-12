@@ -1,18 +1,30 @@
-# ex06.md
-# Passwords
+# ex07.md
+# User Name and Password
 
-# Write a program that displays a welcome message, but only after the user enters 
-# the correct password, where the password is a string that is defined as a 
-# constant in your program. Keep asking for the password until the user enters 
-# the correct password.
+# In the previous exercise, you wrote a program to solicit a password. In this 
+# exercise, you should modify the program so it also requires a user name. The 
+# program should solicit both the user name and the password, then validate both, 
+# and issue a generic error message if one or both are incorrect; the error message 
+# should not tell the user which item is incorrect.
 
+USERNAME = 'Jackson'
 PASSWORD = 'AbcEasyAs123'
 
+input_pass = nil
+input_user = nil
+
 loop do
-  puts ">> Please enter your passord: "
-  user_input = gets.chomp
-  break if user_input == PASSWORD
-  puts "Invalid password!"
+  puts ">> Please enter your user name: "
+  input_user = gets.chomp
+  break if input_user == USERNAME
+  puts "Authorization failed!"
+end
+
+loop do
+  puts ">> Please enter your password: "
+  input_pass = gets.chomp
+  break if input_pass == PASSWORD
+  puts "Authorization failed!"
 end
 
 puts "Welcome!"
