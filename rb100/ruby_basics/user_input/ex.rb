@@ -1,38 +1,37 @@
-# ex0.md
-# Launch School Printer (Part 2)
+# ex10.md
+# Opposites Attract
 
-# In an earlier exercise, you wrote a program that prints 'Launch School is the 
-# best!' repeatedly until a certain number of lines have been printed. Our solution 
-# looked like this:
+# Write a program that requests two integers from the user, adds them together, 
+# and then displays the result. Furthermore, insist that one of the integers be 
+# positive, and one negative; however, the order in which the two integers are 
+# entered does not matter.
 
-# Modify this program so it repeats itself after each input/print iteration, 
-# asking for a new number each time through. The program should keep running 
-# until the user enters q or Q.
+# Do not check for the positive/negative requirement until both integers are 
+# entered, and start over if the requirement is not met.
+
+# You may use the following method to validate input integers:
+
+def valid_number?(number_string)
+  number_string.to_i.to_s == number_string && number_string.to_i != 0
+end
 
 loop do
 
-  user_string = nil
-  user_number = nil
+	puts ">> Please enter a positive or negative integer:"
+	num1 = gets.chomp
+	
+	puts ">> Please enter a positive or negative integer:"
+	num2 = gets.chomp
 
-  loop do
-    puts ">> How many output lines do you want? Enter a number >= 3 (Q to quit):"
-    
-    user_string = gets.chomp.downcase
-    user_number = user_string.to_i
-    
-    break if user_string == 'q'
-    
-    break if user_number >= 3
-    puts ">> That's not enough lines."
-    
-  end
-  
-  break if user_string == 'q'
-  
-  loop do
-    puts "Launch School is the best!"
-    user_number -= 1
-    break if user_number == 0
-  end
+	if (num1.to_i * num2.to_i) > 0
+		puts ">> Sorry. One integer must be positive, one must be negative? "
+		puts ">>Please start over!"
+	elsif (valid_number?(num1) && valid_number?(num2))
+		result = num1.to_i + num2.to_i
+		puts "#{num1} + #{num2} = #{result}"
+		break
+	else  
+		puts ">> Invalid input. Only non-zero integers are allowed."
+	end	
 
 end 
