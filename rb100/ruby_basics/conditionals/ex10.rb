@@ -1,4 +1,4 @@
-# ex09.rb
+# ex10.rb
 # Cool Numbers
 # Answered On: 06/28/2020 
 
