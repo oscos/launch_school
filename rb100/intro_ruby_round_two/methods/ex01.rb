@@ -7,7 +7,7 @@ def greeting(morning_or_noon, name, time)
 end
 
 morning_or_noon = (0..11).include?(Time.now.hour) ? 'Good Morning' : 'Good Afternoon'
-time = Time.now.strftime("%A, %B %d, %I:%M %p")
+time = Time.now.strftime("%A, %B %d %Y, %I:%M %p")
 
 puts "Whats your name"
 input = gets.chomp.capitalize
