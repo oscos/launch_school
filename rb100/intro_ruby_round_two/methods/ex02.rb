@@ -1,3 +1,15 @@
 # Launch School - Intro to Ruby
-# Methods - ex01.rb
-# Answered On 07/19/2020
+# Methods - ex02.rb
+# Answered On 07/20/2020
+
+# What do the following expressions evaluate to?
+
+# 1. x = 2  => 2
+
+# 2. puts x = 2  => nil
+
+# 3. name = "Joe" => "Joe"
+
+# 4. four = "four" => "four"
+
+# 5. print something = "nothing" => nil
