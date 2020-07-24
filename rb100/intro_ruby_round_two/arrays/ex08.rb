@@ -1,5 +1,5 @@
 # Launch School - Intro to Ruby
-# arrays - ex03.rb
+# arrays - ex08.rb
 # Answered On 07/23/2020
 
 # Write a program that iterates over an array and builds a new array that is the

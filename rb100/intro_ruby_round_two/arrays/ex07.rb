@@ -1,5 +1,5 @@
 # Launch School - Intro to Ruby
-# arrays - ex03.rb
+# arrays - ex07.rb
 # Answered On 07/23/2020
 
 # How do you return the word "example" from the following array?
