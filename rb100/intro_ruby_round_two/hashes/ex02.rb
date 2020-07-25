@@ -24,7 +24,8 @@ h3 = {
 # h2 = { "b" => 246, "c" => 300 }
 # h3 = { "b" => 357, "d" => 400 }
 
-# h1.merge(h2, h3) 
 
 # puts "Hello World!"
-p h1.merge(h2).merge(h3)
+
+p h1.merge(h2, h3) 
+# p h1.merge(h2).merge(h3)
