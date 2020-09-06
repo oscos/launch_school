@@ -1,3 +1,4 @@
 # exclude these files & folders from Source Version Control #
 /rb100/ruby_basics/exercises/ex1.rb
 /launch_school.code-workspace
+/rb100/PEDAC.md
