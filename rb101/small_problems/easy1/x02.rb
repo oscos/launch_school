@@ -12,10 +12,13 @@ Answered On: 09/12/2020
 def is_odd?(int)
     
   # int.abs.odd? # #abs, #remainder
+
+  # int.abs.remainder(2) == 1  # #abs and #remainder 
   
-  # p int.abs.remainder(2) == 1  # #abs and #remainder 
+  # int.remainder(2) == 1 || int.remainder(2) == -1  # remainder only
     
   int % 2 != 0 # #modulo
+
 end
 
 puts is_odd?(2)    # => false
