@@ -9,7 +9,19 @@ Answered On: 09/12/2020
 # prints the string as many times as the integer indicates.
 
 def repeat(str, int)
-  int.times { puts str}
+  return puts "Invalid parameters, please try again." if(int < 1 || str.empty?)
+  
+  int.times {puts str}
+  
+  # # other solution using loop
+  # loop do 
+  #     puts(str)
+  #     int -= 1
+  #     break if int == 0
+  # end
 end
 
-repeat('Hello', 3)
+repeat("Hello", 3)
+repeat("Hello", -1)
+repeat("",3)
+repeat(5)
