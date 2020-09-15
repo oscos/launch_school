@@ -17,7 +17,7 @@ def is_odd?(int)
   
   # int.remainder(2) == 1 || int.remainder(2) == -1  # remainder only
     
-  int % 2 != 0 # #modulo
+  int % 2 == 1 # #modulo % always has the sign of the divisor (positive 2)
 
 end
 
