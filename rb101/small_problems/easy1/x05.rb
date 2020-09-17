@@ -1,7 +1,7 @@
 =begin
-Launch School: RB101-RB109 - Small ProblemsEasy 1 - Reverse It (Part 1)
-ExerciseName: [Reverse It (Part 1)(https://launchschool.com/exercises/51e98567)
-FileName: ex04.md
+Launch School: RB101-RB109 - Small Problems - Easy 1 - Reverse It (Part 1)
+ExerciseName: [Reverse It (Part 1)](https://launchschool.com/exercises/51e98567)
+FileName: ex05.md
 Answered On: 09/12/2020
 =end
 
