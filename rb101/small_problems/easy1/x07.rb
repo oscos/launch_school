@@ -1,7 +1,7 @@
 =begin
-Launch School: RB101-RB109 - Small Problems - Easy 1 - Array Average
-ExerciseName: [Array Average](https://launchschool.com/exercises/5b9a3e04)
-FileName: ex08.md
+Launch School: RB101-RB109 - Small Problems - Easy 1 - Stringy Strings
+ExerciseName: [Stringy Strings](https://launchschool.com/exercises/f37a9e56)
+FileName: ex07.md
 Answered On: 09/16/2020
 =end
 
