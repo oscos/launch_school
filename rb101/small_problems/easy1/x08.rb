@@ -12,12 +12,15 @@ Answered On: 09/16/2020
 # require 'pry'
 
 def average(arr)
+  
+  # # Solution #1
   avg = arr.sum / arr.size
+  
+  # # Solution #2
+  # avg = arr.reduce(:+)  / arr.size  
+  
 end 
 
-
-p average([1, 6]) # == 3 # integer division: (1 + 6) / 2 -> 3
-
-# puts average([1, 6]) == 3 # integer division: (1 + 6) / 2 -> 3
-# puts average([1, 5, 87, 45, 8, 8]) == 25
-# puts average([9, 47, 23, 95, 16, 52]) == 40
+puts average([1, 6]) == 3 # integer division: (1 + 6) / 2 -> 3
+puts average([1, 5, 87, 45, 8, 8]) == 25
+puts average([9, 47, 23, 95, 16, 52]) == 40
