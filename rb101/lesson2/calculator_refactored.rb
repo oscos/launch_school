@@ -70,6 +70,14 @@ loop do
     # binding.pry
   end
   
+  op_type_selected =
+  case op_type 
+  when "1" then "adding"
+  when "2" then "subtracting"
+  when "3" then "multiplying"
+  else "dividing"
+  end
+  
   result =
   case op_type 
   when "1" then num1.to_f() + num2.to_f()
@@ -78,7 +86,7 @@ loop do
   else num1.to_f() / num2.to_f()
   end
   
-  Kernel.puts("The result is #{result}")
+  Kernel.puts("The result of #{op_type_selected} #{num1} and #{num2} is #{result}")
   
   user_prompt("Play again? Y for Yes or any key for No")
   play = Kernel.gets().chomp()
@@ -86,7 +94,7 @@ loop do
   if play.downcase == "y"
     next
   else
-    user_prompt("Thanks for playing!")
+    user_prompt("Thanks for playing! Good-bye!")
     break
   end
 end
