@@ -33,7 +33,7 @@ user_prompt("What is your first name?")
 fname = Kernel.gets().chomp()
 user_prompt("Welcome #{fname}. Let's calculate some numbers!")
 
-loop do
+loop do while
   loop do
     user_prompt("Enter a number")
     num1 = Kernel.gets().chomp()

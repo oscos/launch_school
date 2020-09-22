@@ -12,21 +12,29 @@ Created On: 06/14/2020
 ### Understand the Problem
 1. Expected input 
 2. Expected output
+    - Am I returning something or simply printing something
 3. Make Requirements/Rules Explicit
 4. Clarifying Questions
     - What are the extremes, limits on both ends
-    - What to do about nil or empty value or 0
+    - What to do about nil, or null, or empty value, or "", or 0, or [], or {}
+    - repition and/or duplication
+    - upper case / lower case
+    - unexpected data types
+5. If failure / bad input found what do toL
+    - raise exceptions / report errors
+    - return a special value
+    - ask questions.
 
-5. Mental model of the problem (optional)
+6. Mental model of the problem (optional)
 
 ### Examples/Test Case 
-1. Validate understanding of the problem
+7. Validate understanding of the problem
 
 ### Data Structure 
-1. How we represent data that we will work with when converting the input to output.
+8. How we represent data that we will work with when converting the input to output.
 
 ### Algorithm 
-1. Steps for converting input to output
+9. Steps for converting input to output
 
 ### Code with Intent 
-1. Code Implementation of Algorithm
+10. Code Implementation of Algorithm
