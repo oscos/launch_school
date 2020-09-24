@@ -1,6 +1,6 @@
 =begin
-Launch School: RB101 Programming Foundations - Lesson 3 - Practice Problems - Easy 1 - Question 3
-ExerciseName: [Question 3](https://launchschool.com/lessons/263069da/assignments/e2593fe1)
+Launch School: RB101 Programming Foundations - Lesson 3 - Practice Problems
+ExerciseName: [Easy 1](https://launchschool.com/lessons/263069da/assignments/e2593fe1)
 FileName: ex03.rb
 Answered On: 09/22/2020
 =end
