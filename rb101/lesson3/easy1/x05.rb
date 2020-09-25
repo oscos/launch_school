@@ -8,7 +8,8 @@ Answered On: 09/22/2020
 # Programmatically determine if 42 lies between 10 and 100.
 # Use Ruby range object.
 
-p (10..100).include?(42)
+p p 42.between?(10,100)
+# p (10..100).include?(42)
 # p (10..100).cover?(42)
 
 
