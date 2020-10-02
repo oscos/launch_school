@@ -2,44 +2,34 @@
 Launch School: RB101 Programming Foundations - Lesson 3 - Practice Problems
 ExerciseName: [Medium1](https://launchschool.com/lessons/263069da/assignments/6eba600c)
 FileName: ex07.rb
-Answered On: 09/30/2020
+Answered On: 10/01/2020
 =end
 
 # require "pry"
 require "pp"
 
-# One day Spot was playing with the Munster family's home computer and he wrote 
-# a small program to mess with their demographic data:
-# After writing this method, he typed the following...and before Grandpa could 
-# stop him, he hit the Enter key with his tail:
+# Method calls can take expressions as arguments. Suppose we define a method 
+# called rps as follows, which follows the classic rules of rock-paper-scissors 
+# game, but with a slight twist that it declares whatever hand was used in the 
+# tie as the result of that tie.
 
-# Did the family's data get ransacked? Why or why not?
 
-munsters = {
-  "Herman" => { "age" => 32, "gender" => "male" },
-  "Lily" => { "age" => 30, "gender" => "female" },
-  "Grandpa" => { "age" => 402, "gender" => "male" },
-  "Eddie" => { "age" => 10, "gender" => "male" },
-  "Marilyn" => { "age" => 23, "gender" => "female"}
-}
-
-# pp munsters
-
-def mess_with_demographics(demo_hash)
-  demo_hash.values.each do |family_member|
-    family_member["age"] += 42
-    family_member["gender"] = "other"
-    # pp family_member
+def rps(fist1, fist2)
+  if fist1 == "rock"
+    (fist2 == "paper") ? "paper" : "rock"
+  elsif fist1 == "paper"
+    (fist2 == "scissors") ? "scissors" : "paper"
+  else
+    (fist2 == "rock") ? "rock" : "scissors"
   end
 end
 
-p munsters.object_id
-puts("----")
-pp mess_with_demographics(munsters)
-puts("----")
-p munsters.object_id
+# What is the result of the following call
 
-# Answer: 
-#   - the original hash gets mutated, it's values are modified while the hash's
-#   - object_id remains the same. 
+puts rps(rps(rps("rock", "paper"), rps("rock", "scissors")), "rock")
+
+# Answer: "Paper"
+# puts rps(rps("paper", "rock"), "rock")
+# puts rps("paper","rock")
+# puts "paper"
 
