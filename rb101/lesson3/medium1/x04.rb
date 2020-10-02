@@ -1,8 +1,8 @@
 =begin
 Launch School: RB101 Programming Foundations - Lesson 3 - Practice Problems
 ExerciseName: [Medium1](https://launchschool.com/lessons/263069da/assignments/6eba600c)
-FileName: ex05.rb
-Answered On: 09/30/2020
+FileName: ex04.rb
+Answered On: 09/29/2020
 =end
 
 # require "pry"
