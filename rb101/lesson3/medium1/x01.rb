@@ -17,4 +17,4 @@ slogan = 'The Flintstones Rock!'
  
 # 10.times {|str| p slogan.prepend(" ") }
 
-10.times {|str| puts slogan.prepend(" ") }
+10.times {|num| puts slogan.prepend(" ") }
