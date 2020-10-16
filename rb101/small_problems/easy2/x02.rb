@@ -1,5 +1,5 @@
 =begin
-Launch School: RB101-RB109 - Small Problems - Easy 2 - How big is the room?
+Launch School: RB101-RB109 - Small Problems - Easy 2
 ExerciseName: [How big is the room?](https://launchschool.com/exercises/7fc5d216)
 FileName: ex01.md
 Answered On: 09/16/2020
