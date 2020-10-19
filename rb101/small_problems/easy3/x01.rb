@@ -1,8 +1,8 @@
 =begin
-Launch School: RB101-RB109 - Small Problems - Easy 2
+Launch School: RB101-RB109 - Small Problems - Easy 3
 ExerciseName: [Searching 101(https://launchschool.com/exercises/383b2769)
 FileName: x01.rb
-Answered On: 10/16/2020
+Answered On: 10/17/2020
 =end
 
 =begin
@@ -50,7 +50,7 @@ num = 0
 
 
 loop do 
-  break if index == 6
+  break if index == sequence_arr.size
 
   current_value = sequence_arr[index]
   puts("Enter the #{current_value} number: ")
@@ -60,7 +60,7 @@ loop do
     puts("Invalid entry please try again.")
     index -= 1
   else
-  arr << num.to_i if index < 5
+    arr << num.to_i if index < 5
   end 
   
   num = num.to_i
