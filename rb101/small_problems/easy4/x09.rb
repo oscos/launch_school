@@ -18,26 +18,30 @@ Answered On: 10/18/2020
   old-fashioned way and construct the string by analyzing and manipulating the number.
 =end
 
-NUMBERS_HASH = (0..9).zip("0".."9").to_h
-def integer_to_string(number)  
-  numerator = 10
-  # denominator = 1
-  power = 1
-  numchars_arr = []  
+def integer_to_string(number)
+  # num_hash = (0..9).zip("0".."9").to_h
+  num_hash = {0=>"0", 1=>"1", 2=>"2", 3=>"3", 4=>"4", 5=>"5", 6=>"6", 7=>"7", 8=>"8", 9=>"9"}
+  numstr = ''
+  counter = 1
+  
   loop do 
-    current_value = number % (numerator ** power) / (numerator ** power / 10)
-    numchars_arr << NUMBERS_HASH[current_value]
-    break if number == number % (numerator ** power)
-    power += 1
+    current_value = (number % 10**counter) / 10**(counter-1)
+    numstr << num_hash[current_value]
+    break if number == (number % 10**counter)
+    counter += 1
   end
-  numchars_arr.reverse.join
-  # p number % 1000000 / 100000
-  # p number % 100000 / 10000 
-  # p number % 10000 / 1000  
-  # p number % 1000 / 100  
-  # p number % 100 / 10
-  # p number % 10 / 1
+  
+  numstr.reverse
+  
+  # p num = (number % 1000000) / 100000
+  # p num = (number % 100000) / 10000
+  # p num = (number % 10000) / 1000
+  # p num = (number % 1000) / 100
+  # p num = (number % 100) / 10
+  # p num = (number % 10) / 1
+  
 end
+
 p integer_to_string(58207) == '58207'
 p integer_to_string(4321) == '4321'
 p integer_to_string(0) == '0'

@@ -23,42 +23,29 @@ Answered On: 10/19/2020
   method from the previous lesson.
 =end
 
-NUMBERS_HASH = ("0".."9").zip(0..9).to_h
+def string_to_integer(str)
+  # num_hash = ("0".."9").zip(0..9).to_h
+  num_hash = {"0"=>0, "1"=>1, "2"=>2, "3"=>3, "4"=>4, "5"=>5, "6"=>6, "7"=>7, "8"=>8, "9"=>9}
+  number = 0
 
-
-def string_to_integer(string)
-  strnum_arr =
-    string.chars.map do |v|
-      NUMBERS_HASH[v]
-    end  
-
-  runsum = 0
-  strnum_arr.each do |v|
-      runsum = runsum * 10 + v
+  str.reverse.each_char.with_index do |v, index|
+    number += num_hash[v] * 10 ** index
+    index += 1
   end
-  runsum
+  
+  number
 end
+# p string_to_integer('4321') == 4321
+# p string_to_integer('570') == 570
 
-def string_to_signed_integer(string)
-  if string.include?("-")
-    string = string.sub("-","")
-    num = string_to_integer(string)
-    num = num * -1
-  elsif string.include?("+")
-    string = string.sub("+","")
-    num = string_to_integer(string)
-  else
-    num = string_to_integer(string)
-  end
+
+def string_to_signed_integer(str)
+
+  num = string_to_integer(str.gsub(/[+-]/,""))
+  str.include?("-") ? -num : num
+
 end
-
 
 p string_to_signed_integer('4321') == 4321
 p string_to_signed_integer('-570') == -570
 p string_to_signed_integer('+100') == 100
-
-
-# # string_to_integer('92378')
-# p string_to_integer('92378') == 92378
-# p string_to_integer('4321') == 4321
-# p string_to_integer('570') == 570

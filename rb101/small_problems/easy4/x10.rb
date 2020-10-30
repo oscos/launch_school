@@ -17,24 +17,41 @@ Answered On: 10/19/2020
   integer_to_string from the previous exercise.
 =end
 
-NUMBERS_HASH = (0..9).zip("0".."9").to_h
-
+#METHOD ONLY WORKS WITH POSITIVE NUMBER OR 0
 def integer_to_string(number)
-  str = ''
-  counter = 0
-  loop do
-    break if counter == 5      
-    digits,digit = number.divmod(10)
-    p digit
-      str << digit
+  # num_hash = (0..9).zip("0".."9").to_h
+  num_hash = {0=>"0", 1=>"1", 2=>"2", 3=>"3", 4=>"4", 5=>"5", 6=>"6", 7=>"7", 8=>"8", 9=>"9"}
+  numstr = ''
+  counter = 1
+  
+  loop do 
+    current_value = (number % 10**counter) / 10**(counter-1)
+    numstr << num_hash[current_value]
+    break if number == (number % 10**counter)
     counter += 1
   end
-  p str
+  
+  numstr.reverse
 end
-
-integer_to_string(58207)
-
-# p integer_to_string(58207) == '58207'
+# p integer_to_string(987605) 
+# p integer_to_string(987605) = '987605'
 # p integer_to_string(4321) == '4321'
 # p integer_to_string(0) == '0'
 # p integer_to_string(5000) == '5000'
+
+
+def signed_integer_to_string(number)
+  # using ternary:
+  #return "0" if number == 0
+  # number < 0 ? integer_to_string(number * -1).prepend("-") : integer_to_string(number).prepend("+")
+  
+  if number == 0 then integer_to_string(number)
+  elsif number < 0 then integer_to_string(number * -1).prepend("-")
+  elsif number > 0 then integer_to_string(number).prepend("+")
+  end
+end
+
+# p signed_integer_to_string(-987605)
+p signed_integer_to_string(4321) == '+4321'
+p signed_integer_to_string(-123) == '-123'
+p signed_integer_to_string(0) == '0'

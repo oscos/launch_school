@@ -23,25 +23,35 @@ Answered On: 10/19/2020
   the string.
 =end
 
-NUMBERS_HASH = ("0".."9").zip(0..9).to_h 
+# REFACTORED ANSWER
+def string_to_integer(str)
 
-def string_to_integer(string)
-  str_arr =  string.chars
-  
-  num_arr = 
-    str_arr.map do |v|
-      NUMBERS_HASH[v]
-    end
+  num_hash = ("0".."9").zip(0..9).to_h
+  number = 0
 
-  my_int = 0
-  
-  num_arr.each do |number|
-    my_int =my_int * 10 + number  # This line adopted from LS Solution
+  str.reverse.each_char.with_index do |v, index|
+    number += num_hash[v] * 10 ** index
+    index += 1
   end
   
-  my_int
-  
+  number
 end
+
+# ORIGINAL ANSWER
+# def string_to_integer(str)
+
+#   num_hash = {"0"=>0, "1"=>1, "2"=>2, "3"=>3, "4"=>4, "5"=>5, "6"=>6, "7"=>7, "8"=>8, "9"=>9}
+#   number = 0
+#   counter = 0
+
+#   loop do 
+#     break if counter == str.size
+#       current_value = str.reverse[counter]
+#       number += num_hash[current_value] * 10 ** counter
+#     counter += 1
+#   end
+#   number
+# end
 
 p string_to_integer('92378') == 92378
 p string_to_integer('4321') == 4321
