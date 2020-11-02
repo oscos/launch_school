@@ -1,0 +1,32 @@
+=begin
+Launch School: RB101-RB109 - Small Problems - Easy 6
+ExerciseName: [Combining Arrays](https://launchschool.com/exercises/1ba11514)
+FileName: x07.rb
+Answered On: 11/01/2020
+=end
+
+=begin
+  Write a method that takes an Array as an argument, and returns two Arrays 
+  (as a pair of nested Arrays) that contain the first half and second half of 
+  the original Array, respectively. If the original array contains an odd number 
+  of elements, the middle element should be placed in the first half Array.
+=end
+
+def halvsies(arr)
+  half =  arr.size.odd? ? arr.size/2 : (arr.size/2) -1
+  arr2 = []
+  arr2 << arr[0..half]
+  arr2 << arr[(half + 1)..-1]
+end
+
+# modified version of solution by Rona Hsu
+def halvsies(arr)
+  half =  arr.size.odd? ? arr.size/2 : (arr.size/2) - 1
+  arr.partition.with_index { |k,idx| idx <= half }
+end
+
+p halvsies([1, 2, 3, 4]) == [[1, 2], [3, 4]]
+p halvsies([1, 5, 2, 4, 3]) == [[1, 5, 2], [4, 3]]
+p halvsies([5]) == [[5], []]
+p halvsies([]) == [[], []]
+
