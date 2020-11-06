@@ -13,10 +13,9 @@ Answered On: 11/05/2020
 =end
 
 def double_consonants(str)
-  whitelist = ()
   result = ''
   str.size.times do |idx|
-    if str[idx] =~ /[a-z&&[^aeiou]]/i # /[a-z&&[^aeiou]]/i
+    if str[idx] =~ /[a-z&&[^aeiou]]/i
       result << str[idx] * 2 
     else
       result << str[idx]
@@ -25,8 +24,6 @@ def double_consonants(str)
   
   result
 end
-
-p double_consonants('String')
 
 p double_consonants('String') == "SSttrrinngg"
 p double_consonants("Hello-World!") == "HHellllo-WWorrlldd!"
