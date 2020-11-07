@@ -9,9 +9,6 @@ Answered On: 11/06/2020
 
 =end
 
-  # p h1 = { 90: "A", 80: "B", 70: "C", 60: "D" }
-  p h2 = { a: 1, b: 2, c: 3 }
-
 def get_grade(num1, num2, num3)
   avg = (num1 + num2 + num3) / 3
 
@@ -24,9 +21,6 @@ def get_grade(num1, num2, num3)
   end
   
 end
-
-
-p get_grade(95, 90, 93) 
 
 p get_grade(95, 90, 93) == "A"
 p get_grade(50, 50, 95) == "D"
