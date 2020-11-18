@@ -29,17 +29,6 @@ Answered On: 11/07/2020
   With 10 lights, 3 lights are left on: lights 1, 4, and 9. 
   The return value is [1, 4, 9].
   =end
-  
-  With 10 digits:
-    1 2 3 4 5 6 7 8 9 10 # Pass 1
-      2   4   6   8   10 # Pass 2
-        3     6     9    # Pass 3
-          4       8      # Pass 4
-            5         10 # Pass 5
-    1 0 0 1 0 0 0 0 1 0 # 0-Off 1-On
-            
-
-
 
 =begin
 Problem:
@@ -65,6 +54,15 @@ Problem:
       - even iterations counts leave the number off.
 
 Example:
+  
+  With 2 digits:
+    1 2 3 4 5 # Pass 1
+      2   4   # Pass 2
+        3     # Pass 3
+          4   # Pass 4
+            5 # Pass 5
+    1 0 0 1 0 # 0-Off 1-On
+
   With 10 digits:
     1 2 3 4 5 6 7 8 9 10 # Pass 1
       2   4   6   8   10 # Pass 2
@@ -91,7 +89,7 @@ Code: see below
 
 =end
 
-# solution below refactored.
+# solution #1 - (refactored solution #2 below)
 def switch_status(n)
   collection = []
   num_arr = (1..n).to_a
@@ -113,13 +111,10 @@ def switch_status(n)
   loop do
     break if divisor == num_arr.size + 1
     loop do 
-      #p "counter: #{counter} - divisor: #{divisor}"
       break if counter == num_arr.size
       current_value = num_arr[counter]
     #p "counter: #{counter} - current_value: #{current_value} - divisor: #{divisor} = #{current_value % divisor}"
-
       collection << current_value if current_value % divisor == 0
-
       counter += 1
     end
     counter = 0
