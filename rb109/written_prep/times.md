@@ -1,10 +1,10 @@
 ```ruby
 1  a = 'Bob'
-2  x
+2  
 3  5.times do |x|
 4  a = 'Bill'
 5  end
-6  x
+6  
 7  p a
 ```
 
