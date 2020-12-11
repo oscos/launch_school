@@ -8,7 +8,7 @@
 7  p a
 ```
 
-This code outputs and returns the String `"Bill"`. This code demonstrates variables as pointers to address space in computer memory.
+This code outputs and returns the String `"Bill"`. This code demonstrates variables as pointers to physical space in computer memory.
 
 On `line 1` the local variable `a` is initialized to the String `'Bob'`
 
