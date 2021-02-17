@@ -1,6 +1,6 @@
 # exclude these files & folders from Source Version Control #
-/launch_school/study_session
-/launch_school/presentations
+/launch_school/study_session/
+/launch_school/presentations/
 /rb100/ruby_basics/exercises/ex1.rb
 /launch_school.code-workspace
 /rb101/other_ex/
