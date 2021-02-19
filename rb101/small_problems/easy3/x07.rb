@@ -3,6 +3,7 @@ Launch School: RB101-RB109 - Small Problems - Easy 3
 ExerciseName: [Odd Lists](https://launchschool.com/exercises/7ced73ba)
 FileName: x07.rb
 Answered On: 10/18/2020
+Updated On: 02/18/2021
 =end
 
 def oddities(arr)
@@ -15,6 +16,13 @@ def oddities(arr)
     counter += 1
   end 
   even_arr
+end
+
+# Solution # added on 02/18/2021
+def oddities(arr)
+  arr.select.with_index do |num, idx|
+    num if idx.even?
+  end
 end
 
 p oddities([2, 3, 4, 5, 6]) == [2, 4, 6]

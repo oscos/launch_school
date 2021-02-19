@@ -12,14 +12,14 @@ Answered On: 09/16/2020
 # require 'pry'
 
 # Solution #1
-# def stringy(int)
-#   arr_digits = (1..int).to_a
-#   arr10 = []
-#   arr_digits.each do |num|
-#     num % 2 == 1 ? arr10 << 1 : arr10 << 0
-#   end
-#   arr10.join
-# end
+def stringy(int)
+  arr_digits = (1..int).to_a
+  arr10 = []
+  arr_digits.each do |num|
+    num % 2 == 1 ? arr10 << 1 : arr10 << 0
+  end
+  arr10.join
+end
 
 # Solution #2
 def stringy(int)
@@ -30,6 +30,24 @@ def stringy(int)
     num.odd? ? 1 : 0
   end
   arr10.join
+end
+
+# Solution #3
+def stringy(int)
+  result = 
+    1.upto(int).to_a.map.with_index do |i, idx|
+      idx.even? ? 1 : 0  # use even if using index
+    end
+  result.join('')
+end
+
+# Solution #4
+def stringy(int)
+  result = 
+    (1..int).to_a.map do |i|
+      i.odd? ? 1 : 0  # use odd if using number
+    end
+  result.join('')
 end
 
 puts stringy(6) == '101010'
