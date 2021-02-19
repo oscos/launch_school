@@ -3,6 +3,7 @@ Launch School: RB101-RB109 - Small Problems - Easy 3
 ExerciseName: [Palindromic Strings (Part 2)](https://launchschool.com/exercises/8fca300b)
 FileName: x09.rb
 Answered On: 10/18/2020
+Updated On: 02/18/2021
 =end
 
 =begin
@@ -39,6 +40,12 @@ end
 #   string = string.downcase.delete("^a-z0-9")
 #   palindrome?(string)
 # end
+
+# Solution #2 Added 02/18/2021
+def real_palindrome?(str)
+  new_string = str.downcase.gsub(/[^a-z0-9]/i,'')
+  palindrome?(new_string)
+end
 
 p real_palindrome?('madam') == true
 p real_palindrome?('Madam') == true           # (case does not matter)
