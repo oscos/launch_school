@@ -3,6 +3,7 @@ Launch School: RB101-RB109 - Small Problems - Easy 4
 ExerciseName: [Leap Years (Part 1)](https://launchschool.com/exercises/f44b8f8b)
 FileName: x03.rb
 Answered On: 10/18/2020
+Updated On: 02/18/2021
 =end
 
 =begin
@@ -25,6 +26,16 @@ def leap_year?(year)
     false
   end
 end
+
+# Solution #2 Added On 02/18/2021
+def leap_year?(int)
+  case 
+    when int % 400 == 0 && int % 100 == 0 then true
+    when int % 4 == 0   && int % 100 != 0 then true
+    else false
+  end
+end
+
 
 p leap_year?(2016) == true
 p leap_year?(2015) == false

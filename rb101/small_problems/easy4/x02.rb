@@ -3,6 +3,7 @@ Launch School: RB101-RB109 - Small Problems - Easy 4
 ExerciseName: [What Century is That?](https://launchschool.com/exercises/d6a8f167)
 FileName: x02.rb
 Answered On: 10/29/2020
+Updated On: 02/18/2021
 =end
 
 =begin
@@ -28,6 +29,20 @@ def century(number)
   else "#{century_year}th"
   end
 
+end
+
+# Solution #2 On 02/18/2021
+def century(int)
+  num = int.divmod(100)
+  century = num.last == 0 ? num.first : num.first + 1
+  
+  case 
+    when century.digits[1] == 1 then "#{century}th"
+    when century.digits[0] == 1 then "#{century}st"
+    when century.digits[0] == 2 then "#{century}nd"
+    when century.digits[0] == 3 then "#{century}rd"
+    else "#{century}th"
+  end
 end
 
 p century(5) == '1st'

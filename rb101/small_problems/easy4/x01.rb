@@ -3,6 +3,7 @@ Launch School: RB101-RB109 - Small Problems - Easy 4
 ExerciseName: [Short Long Short](https://launchschool.com/exercises/f175ddac)
 FileName: x01.rb
 Answered On: 10/18/2020
+Updated On: 02/18/2021
 =end
 
 =begin
@@ -27,9 +28,10 @@ def short_long_short(str1, str2)
   concat_string
 end 
 
-# short_long_short('abc', 'defgh') == "abcdefghabc"
-# # short_long_short('abcde', 'fgh') == "fghabcdefgh"
-# # short_long_short('', 'xyz') == "xyz"
+# Solution #2 added on 02/18/2021
+def short_long_short(str1, str2)
+  str1.length < str2.length ? (str1 + str2 + str1) : (str2 + str1 + str2)
+end
 
 p short_long_short('abc', 'defgh') == "abcdefghabc"
 p short_long_short('abcde', 'fgh') == "fghabcdefgh"
