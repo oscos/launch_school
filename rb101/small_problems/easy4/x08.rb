@@ -40,11 +40,17 @@ end
 
 
 def string_to_signed_integer(str)
-
   num = string_to_integer(str.gsub(/[+-]/,""))
   str.include?("-") ? -num : num
-
 end
+
+# new solution 02/22/2021
+def string_to_signed_integer(str)
+  str.include?('-') ? sign = -1 : sign = 1
+  clean_str = str.gsub(/[-+]/,'')
+  string_to_integer(clean_str) * sign
+end
+
 
 p string_to_signed_integer('4321') == 4321
 p string_to_signed_integer('-570') == -570

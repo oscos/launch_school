@@ -3,6 +3,7 @@ Launch School: RB101-RB109 - Small Problems - Easy 4
 ExerciseName: [Convert a String to a Number!](https://launchschool.com/exercises/192719a5)
 FileName: x07.rb
 Answered On: 10/19/2020
+Updated On: 02/19/2021
 =end
 
 =begin
@@ -52,6 +53,34 @@ end
 #   end
 #   number
 # end
+
+# New Solution Added 02/19/2021
+def string_to_integer(string)
+  h = ('0'..'9').to_a.zip((0..9).to_a ).to_h
+  str = string
+  counter = -1
+  power = 0
+  result = []
+
+  loop do 
+    current_element = h.fetch(str[counter])
+    result << (current_element * (10**power))
+    break if counter == -(str.size)  
+    counter -= 1
+    power += 1
+  end
+
+  result.sum
+end
+
+# Refactored Solution 02/21/2021
+def string_to_integer(str)
+  h = ('0'..'9').zip(0..9).to_h
+  arr = str.chars.reverse
+  arr.map.with_index do |v, idx|
+    h[v] * (10**idx)
+  end.sum
+end
 
 p string_to_integer('92378') == 92378
 p string_to_integer('4321') == 4321

@@ -3,6 +3,7 @@ Launch School: RB101-RB109 - Small Problems - Easy 5
 ExerciseName: [Multiples of 3 and 5](https://launchschool.com/exercises/675bc8c9)
 FileName: x05.rb
 Answered On: 10/18/2020
+Updated On: 02/18/2021
 =end
 
 =begin
@@ -28,6 +29,12 @@ end
 
 def multisum(number)
   ( multiples(number, 3) + multiples(number, 5) ).uniq.sum
+end
+
+# Solution #2 Added on 02/18/2021
+def multisum(int)
+  arr = (1..int)
+  arr.select{|num| num if (num % 3 == 0 || num % 5 == 0)}.sum
 end
 
 p multisum(20) == 98
