@@ -3,6 +3,7 @@ Launch School: RB101-RB109 - Small Problems - Easy 4
 ExerciseName: [Convert a Number to a String!](https://launchschool.com/exercises/cdc65476)
 FileName: x10.rb
 Answered On: 10/19/2020
+Updated On: 02/24/2021
 =end
 
 =begin
@@ -39,7 +40,7 @@ end
 # p integer_to_string(0) == '0'
 # p integer_to_string(5000) == '5000'
 
-
+# Solution 1
 def signed_integer_to_string(number)
   # using ternary:
   #return "0" if number == 0
@@ -49,6 +50,17 @@ def signed_integer_to_string(number)
   elsif number < 0 then integer_to_string(number * -1).prepend("-")
   elsif number > 0 then integer_to_string(number).prepend("+")
   end
+end
+
+# Solution 2 
+def signed_integer_to_string(num)
+  sign = 
+    case 
+    when num < 0 then '-'
+    when num > 0 then '+'
+    else '' 
+    end
+  sign.concat(integer_to_string(num.abs))
 end
 
 # p signed_integer_to_string(-987605)
