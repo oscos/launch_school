@@ -34,3 +34,13 @@ p is_prime?(12)
 p is_prime?(17)
 p is_prime?(19)
 p is_prime?(21)
+
+
+
+#Additional Solution 03/01/2021
+def is_prime?(num)
+  return false if num < 2
+  (2...num).all? do |i|  # not that 3 dots (excludes num)
+    num % i != 0
+  end
+end

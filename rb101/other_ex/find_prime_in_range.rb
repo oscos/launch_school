@@ -24,7 +24,28 @@ def find_primes(num1,num2)
   end 
 end
 
-
 p find_primes(1,10)
 # p find_primes(1,20)
 # p find_primes(1,30)
+
+
+
+#Additiona Solution 03/01/2021
+def is_prime?(num)
+  return false if num < 2
+  (2...num).all? do |i|  # not that 3 dots (excludes num)
+    num % i != 0
+  end
+end
+
+# method to find all prime_numbers given number. Uses helper method above.
+def prime_numbers(num)
+  result = []
+  (0..num).each do |i|
+    result << i if is_prime?(i)
+  end
+  result
+end
+
+p prime_numbers(100)  == [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97]
+
