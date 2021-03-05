@@ -66,6 +66,14 @@ def reverse(arr)
   arr
 end
 
+# Also like Preston
+def reverse!(arr)
+  arr.each_with_index do |_, idx|
+    arr.insert(idx,arr.pop)
+  end
+end
+
+
 reverse!([1,2,3,4])
 reverse!(%w(a b e d c))
 reverse!([])

@@ -28,8 +28,20 @@ end
   
 # LS Solution
 def include?(array, value)
-  !!array.find_index(value)
+  !!array.find_index(value) # note that the !! converts return value of ! - to boolean value
 end
+
+# Additional solutions added 03/21/2021
+def include?(arr,int)
+  arr.any? { |el| el == int }  
+end
+
+def include?(arr, obj)
+  arr.each { |el|return true if el == obj }
+  false
+end
+
+
 
 # p include?([1,2,3,4,5], 3)
 # p include?([1,2,3,4,5], 6) 

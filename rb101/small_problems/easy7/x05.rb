@@ -21,6 +21,23 @@ def staggered_case(str)
   new_str
 end
 
+# Additional Solution Added 03/04/2021
+def staggered_case(str) 
+  str.chars.map.with_index do |el, idx|
+    idx.even? ? el.upcase : el.downcase
+  end.join
+end
+
+# Additional Solution Added 03/04/2021
+def staggered_case(str) 
+def staggered_case(str) 
+  odd, even = 
+    str.chars.partition.with_index do |el, idx|
+      idx.even? 
+    end
+  odd.map(&:upcase).zip(even.map(&:downcase)).join.delete_suffix(" ") 
+end
+
 p staggered_case('I Love Launch School!')
 
 p staggered_case('I Love Launch School!') == 'I LoVe lAuNcH ScHoOl!'

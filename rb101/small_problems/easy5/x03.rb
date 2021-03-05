@@ -3,6 +3,7 @@ Launch School: RB101-RB109 - Small Problems - Easy 5
 ExerciseName: [After Midnight (Part 2)](https://launchschool.com/exercises/34f92353)
 FileName: x03.rb
 Answered On: 10/29/2020
+Updated On: 02/26/2021
 =end
 
 =begin
@@ -31,6 +32,23 @@ end
 
 def before_midnight(string)
   convert_to_minutes(string,-1)
+end
+
+
+# Additonal Solution added 02/26/2021
+def total_minutes(str)
+  h = str.slice(0,2).to_i
+  m = str.slice(3,2).to_i
+  hours_to_minutes = h * 60
+  total_minutes = hours_to_minutes + m
+end
+
+def after_midnight(str)
+  [0,1440].include?(total_minutes(str)) ? 0 : total_minutes(str)
+end
+
+def before_midnight(str)
+  [0,1440].include?(total_minutes(str)) ? 0 : 1440 - total_minutes(str)
 end
 
 p after_midnight('00:00') == 0

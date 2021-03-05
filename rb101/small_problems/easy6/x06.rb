@@ -15,4 +15,9 @@ def merge(arr1, arr2)
   arr1 | arr2
 end
 
+# Additional Solution added 03/01/2021
+def merge(arr1, arr2)
+  arr1.zip(arr2).flatten.uniq
+end
+
 p merge([1, 3, 5], [3, 6, 9]) == [1, 3, 5, 6, 9]

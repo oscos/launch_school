@@ -18,6 +18,13 @@ def remove_vowels(arr)
   arr.map { |str| str.delete("aeiouAEIOU") }
 end
 
+# Additional Solution adapted from Antonio Serna solution
+def remove_vowels(arr)
+  arr.map do |el|
+    el.split(/[aeiou]/i).join # (/[^aeiou]/i,'')
+  end
+end
+
 # p remove_vowels(%w(abcdefghijklmnopqrstuvwxyz))
 # p remove_vowels(%w(green YELLOW black white))
 

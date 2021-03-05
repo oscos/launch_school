@@ -3,6 +3,7 @@ Launch School: RB101-RB109 - Small Problems - Easy 5
 ExerciseName: [Alphabetical Numbers](https://launchschool.com/exercises/c688f4e5)
 FileName: x08.rb
 Answered On: 10/30/2020
+Updated On: 02/26/2020
 =end
 
 =begin
@@ -27,6 +28,13 @@ def alphabetic_number_sort(arr)
   arr.sort do |number1, number2|
      words[number1]<=>words[number2]
   end
+end
+
+# Additional Solution
+def alphabetic_number_sort(arr)
+  num_string = %w(zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen)
+  h =  arr.zip(num_string).to_h
+  h.sort_by {|k,v| v}.to_h.keys
 end
 
 p alphabetic_number_sort((0..19).to_a)

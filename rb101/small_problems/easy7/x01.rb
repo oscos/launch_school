@@ -40,8 +40,17 @@ def interleave(arr1, arr2)
   arr3
 end
 
+# Additional Solutions added 03/02/2021\
+def interleave(arr1,arr2)
+  arr1.zip(arr2).flatten
+end
+
+def interleave(arr1,arr2)
+  arr1 | arr2  # combines while preserving array order
+end
+
 p interleave([1, 2, 3], ['a', 'b', 'c'])
 
-# interleave([1, 2, 3], ['a', 'b', 'c']) == [1, 'a', 2, 'b', 3, 'c']
+p interleave([1, 2, 3], ['a', 'b', 'c']) == [1, 'a', 2, 'b', 3, 'c']
 
 

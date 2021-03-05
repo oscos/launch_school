@@ -52,7 +52,27 @@ def reverse(array)
   reverse_array
 end
 
-p reverse([1,2,3,4])
-# p reverse(%w(a b e d c))
-# p reverse(%w(a b e d c x y z))
-# p reverse([])
+# Also liked Preston
+def reversed(arr)
+  arr.each_with_object([]) { |el, reversed| reversed.prepend(el) }
+end
+
+# Additional Solution added on 03/01/2021
+def reverse(arr)
+  result = []
+  arr.each_with_index do |el,idx|
+    result.insert(-(idx+1),el)
+  end
+  result
+end
+
+p reverse([1,2,3,4])  == [4,3,2,1]          # => true
+p reverse(%w(a b e d c)) == %w(c d e b a)  # => true
+p reverse(['abc']) == ['abc']              # => true
+p reverse([]) == []                        # => true
+
+list = [1, 3, 2]                      # => [1, 3, 2]
+new_list = reverse(list)              # => [2, 3, 1]
+p list.object_id != new_list.object_id  # => true
+p list == [1, 3, 2]                     # => true
+p new_list == [2, 3, 1]                 # => true

@@ -61,7 +61,12 @@ Code
 require 'pry'
 
 # solution using these two methods won't run as for some reason the fibonacci 
-# implementation is slow.
+# implementation is slow.  
+# Additiona explanation added on 03/02/2021. the reason this version of fibonacci
+# is slow is becuase it is using recursion.  For faster processing use iteration.
+# see new solutions added below for finding fibonacci sequence.
+
+
 # def fibonacci(number)
 #   # if number < 2
 #   #   number
@@ -116,3 +121,23 @@ p find_fibonacci_index_by_length(3)
 # end
 
 # count_down(10)
+
+# Additional Solution added on 03/01/2021
+
+def fibonacci(num)
+  return num if num < 2
+  result = [0,1]
+    until num == 1
+      result << result[-1] + result[-2]
+      num -= 1
+    end
+  result 
+end
+
+def find_fibonacci_index_by_length(num)
+  counter = 1
+  loop do 
+    return counter if fibonacci(counter)[-1].digits.size == num
+    counter += 1
+  end
+end

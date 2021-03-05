@@ -25,6 +25,16 @@ def halvsies(arr)
   arr.partition.with_index { |k,idx| idx <= half }
 end
 
+# Additonal solution added 03/01/2021
+def halvsies(arr)
+  mid =
+    if arr.size.odd? 
+    then (arr.size.to_f / 2).ceil
+    else (arr.size.to_f / 2).floor
+    end
+  arr.partition.with_index { |_, idx| idx < mid }
+end
+
 p halvsies([1, 2, 3, 4]) == [[1, 2], [3, 4]]
 p halvsies([1, 5, 2, 4, 3]) == [[1, 5, 2], [4, 3]]
 p halvsies([5]) == [[5], []]

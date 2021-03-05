@@ -3,6 +3,7 @@ Launch School: RB101-RB109 - Small Problems - Easy 5
 ExerciseName: [After Midnight (Part 1)](https://launchschool.com/exercises/864acdb4)
 FileName: x02.rb
 Answered On: 10/29/2020
+Updated On: 02/26/2021
 =end
 
 =begin
@@ -31,6 +32,15 @@ def time_of_day(number)
   time = hours_formatted.concat(":",minutes_formatted)
 end
 
+# Additional Solution Added 02/26/2021
+def time_of_day(int)
+  num = int.divmod(1440)[1]
+  h = num / 60
+  m = num % 60 
+  hh = h < 10 ? "0#{h}" : h
+  mm = m < 10 ? "0#{m}" : m  
+  "#{hh}:#{mm}"
+end
 
 p time_of_day(0) == "00:00"
 p time_of_day(-3) == "23:57"

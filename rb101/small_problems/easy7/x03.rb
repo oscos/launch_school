@@ -20,7 +20,7 @@ end
 
 # further exploration
 def word_cap(str)
-  str.downcase.split.map{|word| word[0].upcase + word[1..-1].downcase }.join(' ')
+  str.split.map{|word| word[0].upcase + word[1..-1].downcase }.join(' ')
 end
 
 # further exploration

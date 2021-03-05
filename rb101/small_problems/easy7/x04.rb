@@ -28,8 +28,55 @@ def swapcase(str)
   new_str.join
 end
 
-# p swapcase('CamelCase')
-# p swapcase('Tonight on XYZ-TV')
+
+# Additional Solutions all added below on 03/02/2021
+def swapcase(str)
+  str.chars.map do |el|
+    if el == el.upcase
+      el.downcase
+    elsif el == el.downcase
+      el.upcase
+    else
+      el
+    end
+  end.join
+end
+
+# Additional Solutions all added below on 03/02/2021
+def swapcase(str)
+  uppercase = ("A".."Z").to_a
+  lowercase = ("a".."z").to_a
+  letters = uppercase + lowercase
+  
+  str.chars.map do |el|
+    if !letters.include?(el)
+      el
+    elsif uppercase.include?(el)
+      el.downcase
+    else
+      el.upcase
+    end
+  end.join
+end
+
+# Additional Solutions all added below on 03/02/2021
+def swapcase(str)
+  str.chars.map do |el|
+    if el =~ /[a-z]/
+      el.upcase
+    elsif el =~ /[A-Z]/
+      el.downcase
+    else
+      el
+    end
+  end.join
+end
+
+# Antonio Serna Solution 
+# this works because you can apply upcase or downcase to non-alpha chars.
+def swapcase(string)
+  string.chars.map { |c| c.upcase == c ? c.downcase : c.upcase }.join
+end
 
 p swapcase('CamelCase') == 'cAMELcASE'
 p swapcase('Tonight on XYZ-TV') == 'tONIGHT ON xyz-tv'

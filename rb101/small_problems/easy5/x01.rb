@@ -3,6 +3,7 @@ Launch School: RB101-RB109 - Small Problems - Easy 5
 ExerciseName: [ASCII String Value](https://launchschool.com/exercises/ae82edb6)
 FileName: x01.rb
 Answered On: 10/29/2020
+Updated On: 02/24/2021 
 =end
 
 =begin
@@ -22,6 +23,11 @@ determine the ASCII value of a character.)
 
 def ascii_value(str)
   str.chars.map { |chr| chr.ord }.sum
+end
+
+# Additional Solution added 02/24/2021
+def ascii_value(str)
+  str.bytes.sum
 end
 
 p ascii_value('Four score') == 984
