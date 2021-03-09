@@ -25,6 +25,18 @@ def double_consonants(str)
   result
 end
 
+# Additional solutin added 03/08/2021
+def double_consonants(str)
+  str.chars.map do |el|
+    el =~ /[a-z]/i && el =~ /[^aeiou]/i ? el * 2 : el
+  end.join
+end
+
+# Additional solutin added 03/08/2021
+def double_consonants(str)
+  str.chars.map{|el| el =~ /[a-z&&[^aeiou]]/i ? el * 2 : el}.join
+end
+
 p double_consonants('String') == "SSttrrinngg"
 p double_consonants("Hello-World!") == "HHellllo-WWorrlldd!"
 p double_consonants("July 4th") == "JJullyy 4tthh"

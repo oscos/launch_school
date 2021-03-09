@@ -30,4 +30,22 @@ def fizzbuzz(num1, num2)
   result.join(', ')
 end
 
+
+# Solution Added On 03/08/2021
+def fizzbuzz(n1, n2)
+  result = []
+  n1.upto(n2) do |n|
+    result << numval(n)
+  end
+  result 
+end
+def numval(n)
+  case 
+    when n % 3 == 0 && n % 5 == 0 then "FizzBuzz"
+    when n % 3 == 0 then "Fizz"
+    when n % 5 == 0 then "Buzz"
+    else n
+  end
+end
+
 p fizzbuzz(1, 15) # -> 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, FizzBuzz

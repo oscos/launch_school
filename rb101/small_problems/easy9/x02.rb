@@ -25,6 +25,13 @@ def twice(num)
   end
 end
 
+# Additional solution added 03/08/2021
+def twice(int)
+  arr = int.digits.reverse
+  mid = (arr.size / 2.to_f).ceil
+  arr[0...mid] ==  arr[mid..-1] ? int : int * 2
+end
+
 p twice(37) == 74
 p twice(44) == 44
 p twice(334433) == 668866

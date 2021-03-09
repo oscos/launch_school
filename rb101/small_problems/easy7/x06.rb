@@ -49,6 +49,25 @@ def staggered_case(str)
   new_str
 end
 
+# I also liked Sean Richardson's solution:
+def staggered_case(string)
+  counter = 0
+  result = string.chars.each {|char|
+    counter % 2 == 0 ? char.upcase! : char.downcase!
+    counter += 1 if char.match?(/[a-zA-Z]/)
+  }
+  result.join('')
+end
+
+# My adapted solution from Sean Richardson
+def staggered_case(str)
+  counter = 0
+  str.chars.each do |el|
+    counter.even? ? el.upcase! : el.downcase!
+    counter += 1 if el =~ /[a-zA-Z]/
+  end.join
+end
+
 p staggered_case('I Love Launch School!')
 
 # p staggered_case('I Love Launch School!') == 'I lOvE lAuNcH sChOoL!'

@@ -36,6 +36,32 @@ def leading_substrings(str)
   result
 end
 
+# Addional Solution added 03/08/2021
+def substrings(str)
+  str.chars.map.with_index do |subr,index|
+    leading_substrings(str.slice(index..-1))
+  end.flatten
+end
+def leading_substrings(str) # from prev exercise.
+  str.chars.map.with_index do |el, index|
+    str.slice(0..index)
+  end
+end
+
+
+# Additional Solutions Added on 03/08/2021
+def substrings(str)
+  result = []
+  1.upto(str.size) do |idx|
+    str.chars.each_cons(idx) do |subr|
+      result << subr.join
+    end
+  end
+  result.sort
+end
+
+
+
 p substrings('abcde') == [
   'a', 'ab', 'abc', 'abcd', 'abcde',
   'b', 'bc', 'bcd', 'bcde',
