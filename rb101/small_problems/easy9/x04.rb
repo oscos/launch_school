@@ -17,6 +17,13 @@ def sequence(num)
   (1..num).to_a
 end 
 
+# Additonal solution added 03/08/2021
+def sequence(num)
+  (1..num).map do |num|
+    num
+  end
+end
+
 p sequence(5) == [1, 2, 3, 4, 5]
 p sequence(3) == [1, 2, 3]
 p sequence(1) == [1]

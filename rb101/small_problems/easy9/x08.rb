@@ -23,6 +23,49 @@ def sequence(num1, num2)
   end
 end
 
+# additional solution added 03/09/2021
+def sequence(ncount,nfirst)
+  (1..ncount).map do |n|
+    n * nfirst
+  end
+end
+
+# additional solution added 03/09/2021
+def sequence(ncount,nfirst)
+  result = []
+  current_value = nfirst
+  ncount.times do |_|
+    result << current_value
+    current_value += nfirst
+  end
+  result
+end
+
+# additional solution added 03/09/2021
+def sequence(ncount,nfirst)
+  result = []
+  current_value = nfirst
+  1.upto(ncount) do |_|
+    result << current_value
+    current_value += nfirst
+  end
+  result
+end
+
+# additional solution added 03/09/2021
+def sequence(ncount,nfirst)
+  result = []
+  counter = 0
+  current_value = nfirst
+  loop do 
+    break if counter == ncount
+    result << current_value
+    current_value += nfirst
+    counter += 1
+  end
+  result
+end
+
 p sequence(5, 1) == [1, 2, 3, 4, 5]
 p sequence(4, -7) == [-7, -14, -21, -28]
 p sequence(3, 0) == [0, 0, 0]

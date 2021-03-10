@@ -28,8 +28,15 @@ end
 # Additional solution added 03/08/2021
 def twice(int)
   arr = int.digits.reverse
-  mid = (arr.size / 2.to_f).ceil
+  mid = (arr.size / 2)
   arr[0...mid] ==  arr[mid..-1] ? int : int * 2
+end
+
+# Additional solution added 03/08/2021
+def twice(int)
+  arr = int.digits
+  arr2 = arr.each_slice((arr.size / 2.to_f).ceil).to_a
+  arr2.size == 2 && arr2[0] == arr2[1] ? int : int * 2
 end
 
 p twice(37) == 74
