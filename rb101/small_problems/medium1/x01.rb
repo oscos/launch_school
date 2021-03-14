@@ -35,6 +35,20 @@ def rotate_array_first_to_last_and_last_to_first(arr)
   arr_dup.prepend(last)
 end
 
+
+# Additional solutions added 03/11/2021
+def rotate_array(arr)
+arr.drop(1) + arr[0...1]
+end
+
+def rotate_string(str)
+  rotate_array(str.chars).join
+end
+
+def rotate_integer(int)
+  rotate_string(int.to_s).to_i
+end
+
 p rotate_array([7, 3, 5, 2, 9, 1]) == [3, 5, 2, 9, 1, 7]
 p rotate_array(['a', 'b', 'c']) == ['b', 'c', 'a']
 p rotate_array(['a']) == ['a']
@@ -42,3 +56,8 @@ p rotate_array(['a']) == ['a']
 p x = [1, 2, 3, 4]
 p rotate_array(x) == [2, 3, 4, 1]   # => true
 p x == [1, 2, 3, 4]                 # => true
+
+p rotate_string("abc") == "bca"
+p rotate_string("a") == "a"
+
+p rotate_integer(735291) == 352917

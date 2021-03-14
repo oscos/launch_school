@@ -38,6 +38,30 @@ def rotate_rightmost_digits(num, n)
   arr.append(number).join.to_i
 end
 
+# additional solution added 03/11/2021
+def max_rotation(int)
+  arr = int.digits.reverse
+  arrdup = arr.dup # this code works without reduces whats deleted/pushed in.
+  result = []
+  arrdup.each.with_index do |_,idx|
+    arr << arr[idx]
+    arr.delete_at(idx)
+    result = arr
+  end
+  result.join.to_i
+end
+
+# refactored solution added 03/11/2021
+def max_rotation(num)
+  arr = num.digits.reverse
+  arrdup = arr.dup # this code works without reduces whats deleted/pushed in.
+  arrdup.each_with_index do |_, idx|
+    arr << arr.delete_at(idx) 
+  end
+  arr.join.to_i
+end
+
+
 p max_rotation(735291) == 321579
 p max_rotation(3) == 3
 p max_rotation(35) == 53

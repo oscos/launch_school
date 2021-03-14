@@ -124,6 +124,18 @@ def switch_status(n)
   collection.tally.select { |k,v| v.odd? }.keys
 end
 
+# Additional Solution above refactored added 03/13/2021
+def toggle(num)
+  result = []
+  arr = (1..num).to_a
+  arr.each do |idx|
+    arr.each do |n|
+      result << n if n % idx == 0
+    end
+  end
+  result.tally.select { |k,v| v.odd? }.keys
+end
+
 
 p switch_status(5)
 p switch_status(10)
