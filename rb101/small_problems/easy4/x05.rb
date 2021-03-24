@@ -37,6 +37,14 @@ def multisum(int)
   arr.select{|num| num if (num % 3 == 0 || num % 5 == 0)}.sum
 end
 
+# Solution #3 Added on 03/20/2021
+def multisum(input_int)
+  arr = (1..input_int).to_a
+  arr.select do |num|
+    num % 3 == 0 || num % 5 == 0
+  end.sum
+end
+
 p multisum(20) == 98
 p multisum(3) == 3
 p multisum(5) == 8

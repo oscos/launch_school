@@ -3,6 +3,7 @@ Launch School: RB101-RB109 - Small Problems - Easy 4
 ExerciseName: [Convert a String to a Signed Number!](https://launchschool.com/exercises/52e5f20f)
 FileName: x08.rb
 Answered On: 10/19/2020
+Updated On: 03/22/2021
 =end
 
 =begin
@@ -51,6 +52,12 @@ def string_to_signed_integer(str)
   string_to_integer(clean_str) * sign
 end
 
+# new solution added 03/22/2021
+def string_to_signed_integer(input_str)
+  sign = input_str.start_with?("-") ? -1 : 1
+  str = input_str.gsub(/[+-]/,'')
+  string_to_integer(str) * sign
+end
 
 p string_to_signed_integer('4321') == 4321
 p string_to_signed_integer('-570') == -570

@@ -50,6 +50,17 @@ def integer_to_string(num)
   result.reverse
 end
 
+# Solution added 03/23/2021
+def integer_to_string(input_int)
+  digits_hash = (0..9).zip("0".."9").to_h
+  total =  ''
+  arr = input_int.digits.reverse
+  arr.each do |el|
+    total << digits_hash[el]
+  end
+  total
+end
+
 # Original Solution 
 def integer_to_string(number)
   hash = {0=>"0", 1=>"1", 2=>"2", 3=>"3", 4=>"4", 5=>"5", 6=>"6", 7=>"7", 8=>"8", 9=>"9"}

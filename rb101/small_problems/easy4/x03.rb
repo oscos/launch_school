@@ -4,6 +4,7 @@ ExerciseName: [Leap Years (Part 1)](https://launchschool.com/exercises/f44b8f8b)
 FileName: x03.rb
 Answered On: 10/18/2020
 Updated On: 02/18/2021
+Updated On: 03/20/2021
 =end
 
 =begin
@@ -36,6 +37,14 @@ def leap_year?(int)
   end
 end
 
+# Solution #3 Added On 03/20/2021
+def leap_year?(input_int)
+  if input_int % 400 == 0 && input_int % 100 == 0 then true
+  elsif input_int % 100 == 0 then false
+  elsif input_int % 4 == 0 then true
+  else false
+  end
+end
 
 p leap_year?(2016) == true
 p leap_year?(2015) == false

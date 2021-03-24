@@ -4,6 +4,7 @@ ExerciseName: [What Century is That?](https://launchschool.com/exercises/d6a8f16
 FileName: x02.rb
 Answered On: 10/29/2020
 Updated On: 02/18/2021
+Updated On 03/20/2021 
 =end
 
 =begin
@@ -42,6 +43,21 @@ def century(int)
     when century.digits[0] == 2 then "#{century}nd"
     when century.digits[0] == 3 then "#{century}rd"
     else "#{century}th"
+  end
+end
+
+# Solution #3 On 02/18/2021 Total Min: 28, includes 10 min on PEDAC
+def century(input_int)
+  arr = input_int.divmod(100)
+  century_year = arr[1] == 0 ? arr[0]  : arr[0] + 1
+  century_str = century_year.to_s
+  
+  case
+    when century_str.end_with?("11","12","13") then "#{century_str}th"
+    when century_str.end_with?("1") then "#{century_str}st"
+    when century_str.end_with?("2") then "#{century_str}nd"
+    when century_str.end_with?("3") then "#{century_str}rd"
+    else "#{century_str}th"
   end
 end
 

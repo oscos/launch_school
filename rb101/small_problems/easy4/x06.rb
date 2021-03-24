@@ -3,6 +3,7 @@ Launch School: RB101-RB109 - Small Problems - Easy 4
 ExerciseName: [Running Totals](https://launchschool.com/exercises/ba434183)
 FileName: x06.rb
 Answered On: 10/18/2020
+Updated On: 03/21/2020
 =end
 
 =begin
@@ -25,6 +26,26 @@ def running_total(arr)
     counter += 1
   end
   running_sum
+end
+
+# solutin #2 added 03/21/21
+def running_total(arr)
+  results = []
+  total = 0
+  arr.each do |el|
+    total += el
+    results << total
+    total = total
+  end
+  results
+end
+
+# solution #3 is refactored solution #2 both added 03/21/2121
+def running_total(input_arr)
+  total = 0
+  input_arr.map do |current_element|
+    total += current_element
+  end
 end
 
 p running_total([2, 5, 13]) == [2, 7, 20]
