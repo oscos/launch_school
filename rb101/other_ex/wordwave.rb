@@ -19,6 +19,20 @@ def wave(str)
   substring_array
 end 
   
+  
+# David Ecklund's solution     
+def wave(string)
+  result = []
+  0.upto(string.size-1) do |up|
+    arr = string.chars
+    next if arr[up] == " "
+    arr[up] = arr[up].upcase
+    result << arr.join
+  end
+  result
+  
+end
+       
 p wave("hello") == ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 p wave("codewars") == ["Codewars", "cOdewars", "coDewars", "codEwars", "codeWars", "codewArs", "codewaRs", "codewarS"]
 p wave("") == []
