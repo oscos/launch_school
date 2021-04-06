@@ -14,17 +14,17 @@ Answered On: 11/02/2020
     same number of elements.
 =end
 
-# def interleave(arr1, arr2)
-#   arr3 = []
-#   arr1.each_with_index do |element, idx|
-#     arr3 << element << arr2[idx]
-#   end
-#   arr3
-# end
+def interleave(arr1, arr2)
+  arr3 = []
+  arr1.each_with_index do |element, idx|
+    arr3 << element << arr2[idx]
+  end
+  arr3
+end
 
-# def interleave(arr1, arr2)
-#   arr1.zip(arr2).flatten
-# end
+def interleave(arr1, arr2)
+  arr1.zip(arr2).flatten
+end
   
 def interleave(arr1, arr2)
   arr3 = []
@@ -47,6 +47,20 @@ end
 
 def interleave(arr1,arr2)
   arr1 | arr2  # combines while preserving array order
+end
+
+
+# Additoinal Solutions added 03/27/2021
+def interleave(arr1, arr2)
+  results = []
+    arr1.each.with_index do |el,idx|
+      results << el << arr2[idx]
+    end
+  results
+end
+
+def interleave(arr1, arr2)
+    arr1.zip(arr2).flatten
 end
 
 p interleave([1, 2, 3], ['a', 'b', 'c'])

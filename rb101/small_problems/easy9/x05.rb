@@ -3,6 +3,8 @@ Launch School: RB101-RB109 - Small Problems - Easy 9
 ExerciseName: [Uppercase Check](https://launchschool.com/exercises/5ed98c5a)
 FileName: x05.rb
 Answered On: 11/06/2020
+Updated: 03/31/2021
+PEDAC: 03/31/2021
 =end
 
 =begin
@@ -18,6 +20,17 @@ end
 # LS Solution
 def uppercase?(string)
   string == string.upcase
+end
+
+# Additional Solution 03/31/2021
+def uppercase?(input_str)
+  input_str.chars.each do |el|
+      if el =~ (/[a-z]/i)
+        return false if el == el.downcase
+      end
+  end
+  
+  true
 end
 
 p uppercase?('t') == false

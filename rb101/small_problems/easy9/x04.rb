@@ -1,8 +1,10 @@
 =begin
 Launch School: RB101-RB109 - Small Problems - Easy 9
-ExerciseName: [](https://launchschool.com/exercises/38531b9c)
+ExerciseName: [Counting Up](https://launchschool.com/exercises/38531b9c)
 FileName: x04.rb
 Answered On: 11/06/2020
+Updated: 03/31/2021
+PEDAC: 03/31/2021
 =end
 
 =begin
@@ -21,6 +23,20 @@ end
 def sequence(num)
   (1..num).map do |num|
     num
+  end
+end
+
+#Additional Solutions 03/31/2021
+def sequence(num)
+  results = []
+  1.upto(num) do |idx|
+    results << idx
+  end
+  results
+end
+def sequence(num)
+  (1..num).map do |idx|
+    idx
   end
 end
 

@@ -51,6 +51,23 @@ def before_midnight(str)
   [0,1440].include?(total_minutes(str)) ? 0 : 1440 - total_minutes(str)
 end
 
+#Additional Solutions added 03/25/2021
+def str_to_time(str, factor)
+  hr, min = str.split(":")
+  hours = hr.to_i * 60 
+  min = min.to_i * factor
+  hours + min == 1440 ? 0 : hours + min
+end
+
+def after_midnight(str)
+  str_to_time(str, 1)
+end
+
+def before_midnight(str)
+  str_to_time(str, -1)
+end
+
+
 p after_midnight('00:00') == 0
 p after_midnight('12:34') == 754
 p after_midnight('24:00') == 0

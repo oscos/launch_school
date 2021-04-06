@@ -3,6 +3,8 @@ Launch School: RB101-RB109 - Small Problems - Easy 8
 ExerciseName: [Reverse the Digits In a Number](https://launchschool.com/exercises/351fdfdb)
 FileName: x09.rb
 Answered On: 11/05/2020
+Updated: 03/30/2021
+PEDAC: 03/30/2021
 =end
 
 =begin

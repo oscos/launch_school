@@ -68,6 +68,16 @@ def staggered_case(str)
   end.join
 end
 
+# Additional Solution added 03/28/2021
+def staggered_case(str)
+  alpha_counter = 0
+  arr = str.chars
+  arr.map do |el|
+    alpha_counter += 1 if el =~ /[A-Za-z]/
+    alpha_counter.odd? ? el.upcase : el.downcase
+  end.join
+end
+
 p staggered_case('I Love Launch School!')
 
 # p staggered_case('I Love Launch School!') == 'I lOvE lAuNcH sChOoL!'

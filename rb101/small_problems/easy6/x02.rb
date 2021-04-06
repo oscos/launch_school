@@ -3,6 +3,8 @@ Launch School: RB101-RB109 - Small Problems - Easy 6
 ExerciseName: []()
 FileName: x0.rb
 Answered On: 10/30/2020
+Updated On: 03/29/2021
+PEDAC On: 03/29/2021
 =end
 
 =begin
@@ -22,6 +24,13 @@ end
 def remove_vowels(arr)
   arr.map do |el|
     el.split(/[aeiou]/i).join # (/[^aeiou]/i,'')
+  end
+end
+
+# Additional Solution 03/29/2021 (same as first time)
+def remove_vowels(arr)
+  arr.map do |subs|
+    subs.gsub(/[aieou]/i, "")
   end
 end
 

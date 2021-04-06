@@ -3,6 +3,8 @@ Launch School: RB101-RB109 - Small Problems - Easy 9
 ExerciseName: [How long are you?](https://launchschool.com/exercises/15a07c61)
 FileName: x06.rb
 Answered On: 11/06/2020
+Updated: 03/31/2021
+PEDAC: 03/31/2021
 =end
 
 =begin
@@ -30,6 +32,13 @@ def word_lengths(str)
   end
 end
 
+# Additional Solution 03/31/2021
+def word_lengths(input_str)
+  arr = input_str.split(" ")
+  arr.map do |subs|
+    subs = "#{subs} #{subs.length}" # No need to reassign since map transforms
+  end
+end
 
 p word_lengths("cow sheep chicken") == ["cow 3", "sheep 5", "chicken 7"]
 

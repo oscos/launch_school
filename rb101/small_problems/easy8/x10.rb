@@ -3,6 +3,8 @@ Launch School: RB101-RB109 - Small Problems - Easy 8
 ExerciseName: [Get The Middle Character](https://launchschool.com/exercises/365dfb8b)
 FileName: x10.rb
 Answered On: 11/05/2020
+Updated: 03/30/2021
+PEDAC: 03/30/2021
 =end
 
 =begin
@@ -20,6 +22,12 @@ def center_of(str)
   else
     str[half_point-1,2]
   end
+end
+
+# Additional Solution 03/30/2021
+def center_of(str)
+  mid = str.length / 2
+  str.length.even? ? str[(mid - 1)..mid] : str[mid]
 end
 
 p center_of('I love ruby') == 'e'

@@ -3,6 +3,8 @@ Launch School: RB101-RB109 - Small Problems - Easy 8
 ExerciseName: [Double Char (Part 2)](https://launchschool.com/exercises/86fbfc4c)
 FileName: x08.rb
 Answered On: 11/05/2020
+Updated: 03/30/2021
+PEDAC: 03/30/2021
 =end
 
 =begin
@@ -35,6 +37,39 @@ end
 # Additional solutin added 03/08/2021
 def double_consonants(str)
   str.chars.map{|el| el =~ /[a-z&&[^aeiou]]/i ? el * 2 : el}.join
+end
+
+# Additional solution 03/30/2021
+def double_consonants(str)
+  alpha = ("A".."Z").to_a + ("a".."z").to_a
+  vowels = ("AEIOUaeiou")
+  str.chars.map do |el|
+    if alpha.include?(el) && !(vowels.include?(el))
+      el * 2 
+    else
+      el
+    end
+  end.join
+end
+
+def double_consonants(str)
+  str.chars.map do |el|
+    if el =~ (/[a-z&&[^aeiou]]/i)
+      el * 2 
+    else
+      el
+    end
+  end.join
+end
+
+def double_consonants(str)
+  str.chars.map do |el|
+    if el =~ (/[a-z]/i) && el =~ (/[^aeiou]/i)
+      el * 2 
+    else
+      el
+    end
+  end.join
 end
 
 p double_consonants('String') == "SSttrrinngg"

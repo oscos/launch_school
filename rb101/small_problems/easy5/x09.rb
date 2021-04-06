@@ -25,6 +25,15 @@ def crunch(str)
   new_arr.join
 end
 
+# Solution added 03/27/2021
+def crunch(str)
+  results = ''
+  str.chars.each do |el|
+    results << el unless results[-1] == el
+  end
+  results
+end
+
 
 # crunch('ddaaiillyy ddoouubbllee')
 # crunch('4444abcabccba')

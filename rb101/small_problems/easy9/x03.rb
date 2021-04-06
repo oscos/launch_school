@@ -3,6 +3,8 @@ Launch School: RB101-RB109 - Small Problems - Easy 9
 ExerciseName: [Always Return Negative](https://launchschool.com/exercises/311da364)
 FileName: x03.rb
 Answered On: 11/06/2020
+Updated: 03/31/2021
+PEDAC: 03/31/2021
 =end
 
 =begin
@@ -18,6 +20,15 @@ end
 # LS Solution
 def negative(number)
   -number.abs
+end
+
+
+# Additional Solutions 03/31/2021
+def negative(num)
+  num > 0 ? -num : num
+end
+def negative(num)
+  -num.abs
 end
 
 

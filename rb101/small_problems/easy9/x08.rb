@@ -3,6 +3,8 @@ Launch School: RB101-RB109 - Small Problems - Easy 9
 ExerciseName: []()
 FileName: x0.rb
 Answered On: 11/06/2020
+Updated: 03/31/2021
+PEDAC: 03/31/2021
 =end
 
 =begin
@@ -65,6 +67,22 @@ def sequence(ncount,nfirst)
   end
   result
 end
+
+# additional solutions 03/31/2021
+def sequence(n1, n2)
+  results = []
+  1.upto(n1) do |idx|
+    results << n2 * idx
+  end
+  
+  results
+end
+def sequence(n1, n2)
+  (1..n1).map do |idx|
+    n2 * idx
+  end
+end
+
 
 p sequence(5, 1) == [1, 2, 3, 4, 5]
 p sequence(4, -7) == [-7, -14, -21, -28]

@@ -41,6 +41,13 @@ def include?(arr, obj)
   false
 end
 
+#Additoinal solution 03/29/2021
+def include?(param1, param2)
+  param1.each do |el|
+    return true if el == param2
+  end
+  false
+end
 
 
 # p include?([1,2,3,4,5], 3)

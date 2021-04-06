@@ -3,6 +3,8 @@ Launch School: RB101-RB109 - Small Problems - Easy 6
 ExerciseName: [Reversed Arrays (Part 2)](https://launchschool.com/exercises/577016f3)
 FileName: x05.rb
 Answered On: 11/01/2020
+Updated: 03/29/2021
+PEDAC: 03/29/2021
 =end
 
 =begin
@@ -64,6 +66,25 @@ def reverse(arr)
     result.insert(-(idx+1),el)
   end
   result
+end
+
+# additional solution 03/29/2021
+def reverse(arr)
+  results = []
+  1.upto(arr.size) do |idx|
+    results << arr[-idx]
+  end 
+    
+  results
+end
+
+# additional solution 03/29/2021
+def reverse(arr)
+  results = []
+  arr.each do |el| 
+    results.prepend(el)
+  end
+  results
 end
 
 p reverse([1,2,3,4])  == [4,3,2,1]          # => true

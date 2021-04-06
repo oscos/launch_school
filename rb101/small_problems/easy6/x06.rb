@@ -3,6 +3,8 @@ Launch School: RB101-RB109 - Small Problems - Easy 6
 ExerciseName: [Combining Arrays](https://launchschool.com/exercises/1ba11514)
 FileName: x06.rb
 Answered On: 11/01/2020
+Updated: 03/29/2020
+PEDAC: 03/29/2020
 =end
 
 =begin
@@ -18,6 +20,14 @@ end
 # Additional Solution added 03/01/2021
 def merge(arr1, arr2)
   arr1.zip(arr2).flatten.uniq
+end
+
+# Additional solution 03/29/2021
+def merge(arr1, arr2)
+  arr1.each do |el|
+    arr2 << el unless arr2.include?(el)
+  end
+  arr2.sort
 end
 
 p merge([1, 3, 5], [3, 6, 9]) == [1, 3, 5, 6, 9]

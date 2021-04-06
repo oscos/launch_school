@@ -1,8 +1,10 @@
 =begin
 Launch School: RB101-RB109 - Small Problems - Easy 8
-ExerciseName: []()
-FileName: x0.rb
+ExerciseName: [All Substrings](https://launchschool.com/exercises/70718e76)
+FileName: x04.rb
 Answered On: 11/05/2020
+Updated: 03/29/2021
+PEDAC: 03/29/2021
 =end
 
 =begin
@@ -60,7 +62,28 @@ def substrings(str)
   result.sort
 end
 
+# Additional Solutions 03/29/2021
+def substrings(str)
+  results = []
+  1.upto(str.length) do |idx|  
+    str.chars.each_cons(idx) do |subr|
+      results << subr.join
+    end  
+  end
+  results.sort
+end
 
+# Additional Solutions 03/29/2021
+def helper_method(str)
+    str.chars.map.with_index do |_, idx|
+      str[0..idx]
+    end
+end
+def substrings(str)
+  str.chars.map.with_index do |el, idx|
+    helper_method(str[idx..-1])
+  end.flatten.sort
+end
 
 p substrings('abcde') == [
   'a', 'ab', 'abc', 'abcd', 'abcde',

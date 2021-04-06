@@ -3,6 +3,8 @@ Launch School: RB101-RB109 - Small Problems - Easy 8
 ExerciseName: [Double Char (Part 1)](https://launchschool.com/exercises/665638e3)
 FileName: x07.rb
 Answered On: 11/05/2020
+Updated: 03/30/2021
+PEDAC: 03/30/2021
 =end
 
 =begin
@@ -29,6 +31,13 @@ def repeater(str)
 end
 
 # Additonal Solution Added 03/08/2021
+def repeater(str)
+  str.chars.map do |el|
+    el * 2
+  end.join
+end
+
+# Additonal Solution Added 03/30/2021
 def repeater(str)
   str.chars.map do |el|
     el * 2

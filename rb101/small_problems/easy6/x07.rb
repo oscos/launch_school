@@ -1,8 +1,10 @@
 =begin
 Launch School: RB101-RB109 - Small Problems - Easy 6
-ExerciseName: [Combining Arrays](https://launchschool.com/exercises/1ba11514)
+ExerciseName: [Halvsies](https://launchschool.com/exercises/d9b79537)
 FileName: x07.rb
 Answered On: 11/01/2020
+Updated: 03/29/2021
+PEDAC: 03/29/2021
 =end
 
 =begin
@@ -33,6 +35,14 @@ def halvsies(arr)
     else (arr.size.to_f / 2).floor
     end
   arr.partition.with_index { |_, idx| idx < mid }
+end
+
+# Additional solution 03/29/2021
+def halvsies(arr)
+  results = []
+  mid = arr.size.odd? ? (arr.size / 2) + 1 : (arr.size / 2)
+  results << arr[0...mid] << arr[mid..-1]
+  results
 end
 
 p halvsies([1, 2, 3, 4]) == [[1, 2], [3, 4]]

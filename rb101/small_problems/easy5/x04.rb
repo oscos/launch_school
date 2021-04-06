@@ -3,6 +3,7 @@ Launch School: RB101-RB109 - Small Problems - Easy 5
 ExerciseName: [Letter Swap](https://launchschool.com/exercises/56e92849)
 FileName: x04.rb
 Answered On: 10/29/2020
+Updated On: 03/25/2021
 =end
 
 =begin
@@ -25,6 +26,17 @@ def swap(str)
     end
     
   new_word.join(" ")
+end
+
+# Solution added 03/25/2021
+def swap(str)
+  
+  arr = str.split
+  arr.map do |word|
+    word[0], word[-1] = word[-1], word[0]
+    word
+  end.join(" ")
+  
 end
 
 p swap('Oh what a wonderful day it is') == 'hO thaw a londerfuw yad ti si'

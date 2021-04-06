@@ -42,6 +42,15 @@ def time_of_day(int)
   "#{hh}:#{mm}"
 end
 
+# Additional Solution Added 03/25/2021
+def time_of_day(num)
+  hr, min = (num % 1440).divmod(60)
+  hours = hr < 10 ? "0#{hr}" : hr
+  minutes = min < 10 ? "0#{min}" : min
+  "#{hours}:#{minutes}"
+end
+
+
 p time_of_day(0) == "00:00"
 p time_of_day(-3) == "23:57"
 p time_of_day(35) == "00:35"

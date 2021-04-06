@@ -3,6 +3,8 @@ Launch School: RB101-RB109 - Small Problems - Easy 9
 ExerciseName: [Welcome Stranger](https://launchschool.com/exercises/16ab1e1f)
 FileName: x01.rb
 Answered On: 11/06/2020
+Updated: 03/30/2021
+PEDAC: 03/30/2021
 =end
 
 =begin

@@ -3,6 +3,8 @@ Launch School: RB101-RB109 - Small Problems - Easy 6
 ExerciseName: [Find the Duplicate](https://launchschool.com/exercises/fc74794d)
 FileName: x08.rb
 Answered On: 11/01/2020
+Updated: 03/29/2021
+PEDAC: 03/29/2021
 =end
 
 =begin
@@ -25,6 +27,12 @@ end
 # LS Solution: 
 def find_dup(array)
   array.find { |element| array.count(element) == 2 }
+end
+
+# Additional Solution 03/29/2021
+def find_dup(arr)
+  arr.group_by { |subr| subr }
+  .select {|k,v| v.size > 1}.keys[0]
 end
 
 p find_dup([1, 5, 3, 1]) == 1

@@ -54,6 +54,19 @@ def leading_substrings(str)
   result
 end
 
+#Additonal Solution 03/30/2021
+# produces correct result however fails solution becuase
+# sort is off due to the way each_cons returns results.
+def palindromes(str)
+  results = []
+  1.upto(str.length) do |idx|
+    str.chars.each_cons(idx)
+    .each {|subr| results << subr.join if subr.size > 1 && subr == subr.reverse}
+  end
+  results.sort 
+end
+
+
 p palindromes('abcd') == []
 p palindromes('madam') == ['madam', 'ada']
 p palindromes('hello-madam-did-madam-goodbye') == [

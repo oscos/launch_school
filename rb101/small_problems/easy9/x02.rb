@@ -3,6 +3,8 @@ Launch School: RB101-RB109 - Small Problems - Easy 9
 ExerciseName: [Double Doubles](https://launchschool.com/exercises/b5c55bc6)
 FileName: x01.rb
 Answered On: 11/06/2020
+Updated: 03/30/2021
+PEDAC: 03/30/2021
 =end
 
 =begin
@@ -37,6 +39,14 @@ def twice(int)
   arr = int.digits
   arr2 = arr.each_slice((arr.size / 2.to_f).ceil).to_a
   arr2.size == 2 && arr2[0] == arr2[1] ? int : int * 2
+end
+
+# Additional solution added 03/30/2021
+def twice(n)
+  arr = n.digits.reverse
+  mid = arr.size / 2
+  left, right = arr[0...mid], arr[mid..-1]
+  left == right ? n : n * 2
 end
 
 p twice(37) == 74

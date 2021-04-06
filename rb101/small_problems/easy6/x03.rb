@@ -3,6 +3,7 @@ Launch School: RB101-RB109 - Small Problems - Easy 6
 ExerciseName: [Fibonacci Number Location By Length](https://launchschool.com/exercises/1ba53710)
 FileName: x03.rb
 Answered On: 10/30/2020
+PEDAC: 03/29/2021
 =end
 
 =begin
