@@ -61,6 +61,14 @@ def max_rotation(num)
   arr.join.to_i
 end
 
+#refactored solution added 07/15/2021
+def max_rotation(num)
+  arr = num.digits.reverse
+  0.upto(num.digits.size - 1) do |idx|
+    arr.delete_at(idx)
+  end
+  arr.join.to_i
+end
 
 p max_rotation(735291) == 321579
 p max_rotation(3) == 3
