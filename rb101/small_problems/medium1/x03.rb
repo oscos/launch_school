@@ -65,7 +65,7 @@ end
 def max_rotation(num)
   arr = num.digits.reverse
   0.upto(num.digits.size - 1) do |idx|
-    arr.delete_at(idx)
+    arr << arr.delete_at(idx)
   end
   arr.join.to_i
 end
